@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+img {
+  border-radius: 8%;
+}
+
+.app {
+  font-family: Titillium, serif;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
