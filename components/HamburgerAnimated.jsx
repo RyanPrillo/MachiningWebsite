@@ -10,11 +10,8 @@ const HamburgerAnimated = () => {
     }
 
     return (
-        // <div className={`${isOpen ? 'fixed h-full w-4/12' : 'h-12 w-12'}`}>
-        // bg-white pt-7 pb-7 pl-7
-
-        <div className={`fixed ${isOpen ? 'fixed h-full w-4/12 bg-white border-black border-4 border-opacity-20' : ''}`}>
-            <div className={`bg-white m-7`}>
+        <div className={`fixed ${isOpen ? 'h-full w-4/12 bg-white border-black border-4 border-opacity-20' : ''}`}>
+            <div className={`bg-white m-7 whitespace-normal`}>
                 <button className={`justify-center focus:outline-none`} onClick={toggleMenu}>
                     {/*${isOpen ? 'ring-gray-300 ring-2' : 'ring-2'}*/}
                     <div className="relative flex overflow-hidden items-center justify-center rounded-full w-12 h-12 transition-all bg-slate-700 duration-200 shadow-md">
@@ -30,24 +27,24 @@ const HamburgerAnimated = () => {
                         </div>
                     </div>
                 </button>
-                {isOpen && <div className="">
+                {isOpen && <div className="whitespace-normal">
                     <FontAwesomeIcon icon={faInfo} style={{color: "#6b7be8"}} size="3x" className="inline pt-10 pr-4"/>
-                    <div className="inline text-black text-4xl">
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl inline text-black">
                         About Our Shop
                     </div>
                     <br/>
                     <FontAwesomeIcon icon={faFolderOpen} style={{color: "#6b7be8"}} size="3x" className="pt-10 pr-4"/>
-                    <div className="inline text-black text-4xl">
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl inline text-black">
                         Example Work
                     </div>
                     <br/>
                     <FontAwesomeIcon icon={faBriefcase} style={{color: "#6b7be8"}} size="3x" className="pt-10 pr-4"/>
-                    <div className="inline text-black text-4xl">
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl inline text-black">
                         Services
                     </div>
                     <br/>
                     <FontAwesomeIcon icon={faEnvelope} style={{color: "#6b7be8"}} size="3x" className="pt-10 pr-4"/>
-                    <div className="inline text-black text-4xl">
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl inline text-black">
                         Contact Us
                     </div>
                 </div>}
@@ -55,5 +52,6 @@ const HamburgerAnimated = () => {
         </div>
     );
 }
+
 
 export default HamburgerAnimated;
