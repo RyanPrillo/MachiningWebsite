@@ -27,7 +27,7 @@ export default function Home() {
                              alt=""
                       />
                   </div>
-                  <div style={{fontSize: "x-large"}} className="text-black">"Striving towards Excellent Quality Machining at an Affordable Cost!"</div>
+                  <div style={{fontSize: "x-large"}} className="text-black">Striving towards Excellent Quality Machining at an Affordable Cost!</div>
               </div>
           </div>
           <div style={{display: "flex", justifyContent: "center", padding: "2em"}} className="border-t-8">
