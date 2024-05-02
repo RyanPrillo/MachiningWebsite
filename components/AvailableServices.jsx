@@ -38,7 +38,7 @@ const AvailableServices = () => {
     });
 
     return (
-        <div className="grid grid-cols-2 gap-4 mx-10 bg-white">
+        <div className="grid grid-cols-2 gap-4 mx-10 bg-white border-8 rounded-3xl shadow-gray-600 shadow-2xl">
             <div className="bg-white text-black text-center p-4 font-bold shadow-white rounded">
                 <h3 className="text-4xl">Our Services</h3>
             </div>

@@ -1,19 +1,18 @@
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faInfo, faEnvelope, faBriefcase, faFolderOpen} from "@fortawesome/free-solid-svg-icons";
+import {faInfo, faEnvelope, faBriefcase, faFolderOpen, faHome} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const HamburgerAnimated = () => {
     let [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-
     }
 
     return (
         <div className={`fixed ${isOpen ? 'h-full w-4/12 bg-white border-black border-4 border-opacity-20' : ''}`}>
-            <div className={`bg-white m-7 whitespace-normal`}>
+            <div className={`rounded-xl border-white bg-white border-8 m-7 whitespace-normal`}>
                 <button className={`justify-center focus:outline-none`} onClick={toggleMenu}>
-                    {/*${isOpen ? 'ring-gray-300 ring-2' : 'ring-2'}*/}
                     <div className="relative flex overflow-hidden items-center justify-center rounded-full w-12 h-12 transition-all bg-slate-700 duration-200 shadow-md">
                         <div className="flex flex-col justify-between w-7 h-7 transition-all duration-300 origin-center overflow-hidden">
                             <div className={`bg-white h-1 w-9 transform transition-all duration-300 origin-left ${isOpen ? 'translate-x-10' : ''}`}></div>
@@ -28,6 +27,11 @@ const HamburgerAnimated = () => {
                     </div>
                 </button>
                 {isOpen && <div className="whitespace-normal">
+                    <FontAwesomeIcon icon={faHome} style={{color: "#6b7be8"}} size="3x" className="inline pt-10 pr-4"/>
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl inline text-black">
+                        <Link href="/" >Home Page</Link>
+                    </div>
+                    <br/>
                     <FontAwesomeIcon icon={faInfo} style={{color: "#6b7be8"}} size="3x" className="inline pt-10 pr-4"/>
                     <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl inline text-black">
                         About Our Shop
@@ -35,7 +39,7 @@ const HamburgerAnimated = () => {
                     <br/>
                     <FontAwesomeIcon icon={faFolderOpen} style={{color: "#6b7be8"}} size="3x" className="pt-10 pr-4"/>
                     <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl inline text-black">
-                        Example Work
+                        <Link href="/example-work" >Example Work</Link>
                     </div>
                     <br/>
                     <FontAwesomeIcon icon={faBriefcase} style={{color: "#6b7be8"}} size="3x" className="pt-10 pr-4"/>
