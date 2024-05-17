@@ -32,10 +32,10 @@ export default function AboutUs() {
                 </h1>
 
                 <p className="flex flex-col items-center text-black p-6 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
-                    <h2 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-2 tracking-wider w-2/3">A Mechanic's Precision, A Machinist's Artistry</h2>
+                    <h2 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-2 tracking-wider w-2/3">A Mechanic&apos;s Precision, A Machinist&apos;s Artistry</h2>
                     From the intricate workings of engine components, to the precise demands of custom metal
-                    projects, Thomas P.'s journey began in the bustling shops of auto repair. He honed his attention to
-                    detail and focus on doing the job right, no matter the task. His passion for perfection didn't
+                    projects, Thomas P.&apos;s journey began in the bustling shops of auto repair. He honed his attention to
+                    detail and focus on doing the job right, no matter the task. His passion for perfection didn&apos;t
                     stop at mechanics, though. Over the years, his passion developed into machining and the precise
                     nature of it. Every free moment he had, was spent in his workshop, honing his abilities as a
                     machinist.
@@ -43,10 +43,10 @@ export default function AboutUs() {
 
                 <p className="flex flex-col items-center text-black p-6 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
                     <h3 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-2 tracking-wider w-2/3">Crafted with Care</h3>
-                    Stellar Metal isn't just a business; it is the culmination of countless hours of disciplined
+                    Stellar Metal isn&apos;t just a business; it is the culmination of countless hours of disciplined
                     craftsmanship and a relentless pursuit for perfection. Here, we specialize one-off projects, and
-                    custom-made pieces that many larger machine shops won't take on due to a small volume. Whether
-                    it is a unique part for your car project, or a custom-made part for your startup company's
+                    custom-made pieces that many larger machine shops won&apos;t take on due to a small volume. Whether
+                    it is a unique part for your car project, or a custom-made part for your startup company&apos;s
                     prototype, we exhibit great care and precision for every project we take on.
                 </p>
 
@@ -56,7 +56,7 @@ export default function AboutUs() {
                         <p>&#x0022; We Believe even the smallest details can make the biggest difference &#x0022;</p>
                     </blockquote>
                     Our commitment to detail is unmatched. We believe even the smallest details can make the biggest
-                    that every project isn't just completed, but perfected.
+                    that every project isn&apos;t just completed, but perfected.
                 </p>
 
                 <p className="flex flex-col items-center text-black p-6 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
