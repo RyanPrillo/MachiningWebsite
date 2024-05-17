@@ -34,7 +34,7 @@ const HamburgerAnimated = () => {
                     <br/>
                     <FontAwesomeIcon icon={faInfo} style={{color: "#6b7be8"}} size="3x" className="inline pt-10 pr-4"/>
                     <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl inline text-black">
-                        About Our Shop
+                        <Link href="/about-us" >About Our Shop</Link>
                     </div>
                     <br/>
                     <FontAwesomeIcon icon={faFolderOpen} style={{color: "#6b7be8"}} size="3x" className="pt-10 pr-4"/>

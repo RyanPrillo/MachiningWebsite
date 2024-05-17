@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 img {
-  border-radius: 8%;
+  /*border-radius: 8%;*/
 }
 
 .app {
-  font-family: Titillium, serif;
+  font-family: NORTHWEST, serif;
 }
 
 :root {

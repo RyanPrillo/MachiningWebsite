@@ -1,13 +1,14 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Contacts() {
     return (
-        <div className="fixed right-10">
-            <div className="text-black">Contact Us!</div>
+        <div className="flex flex-row items-center">
             <div>
-                <FontAwesomeIcon icon={faEnvelope} style={{color: "#a6d0f3"}} size="3x"/>
+                <FontAwesomeIcon icon={faEnvelope} style={{color: "#a6d0f3"}} size=""/>
             </div>
+            <Link href="/contact" className="text-yellow-200">Contact Us!</Link>
         </div>
     )
 }
