@@ -25,7 +25,8 @@ module.exports = {
       },
     },
   },
-  plugins: {
-    autoprefixer: {},
-  },
+  plugins: [
+    require('tailwindcss-highlights'),
+    require("autoprefixer"),
+],
 };
