@@ -1,7 +1,6 @@
 export default function Services() {
     return (
-        // backdrop-blur backdrop-opacity-100 backdrop-saturate-100
-        // grid grid-cols-1 grid-rows-3
+
         <div className="w-full h-4/5">
             <article className="w-full h-full z-10">
                 <div className="flex flex-col justify-between h-5/6 w-full">
