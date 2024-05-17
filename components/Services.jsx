@@ -1,4 +1,4 @@
-export default function () {
+export default function Services() {
     return (
         // backdrop-blur backdrop-opacity-100 backdrop-saturate-100
         // grid grid-cols-1 grid-rows-3
