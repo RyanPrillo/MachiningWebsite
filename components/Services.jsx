@@ -13,6 +13,7 @@ export default function Services() {
                         <h2 className="flex font-extrabold bg-blue-400 text-[13px] sm:text-lg md:text-xl xl:text-3xl text-center justify-center shadow-black shadow-lg rounded-lg p-2 m-3 border-2 border-gray-500">
                             Repair Work:
                         </h2>
+
                         <ul className="font-bold text-black list-disc text-xs sm:text-[16px] md:text-lg/[24px] xl:text-xl h-full text-start pb-2 md:pb-4 xl:pb-8 pl-6">
                             <li>Motor Shaft Repair</li>
                             <li>Spindle Repair</li>
@@ -26,6 +27,7 @@ export default function Services() {
                         <h2 className="flex font-extrabold bg-blue-400 text-[13px] sm:text-lg md:text-xl xl:text-3xl text-center justify-center shadow-black shadow-lg rounded-lg p-2 m-3 border-2 border-gray-500">
                             Basic Fabrication:
                         </h2>
+
                         <ul className="font-bold text-black list-disc text-xs sm:text-[16px] md:text-lg/[24px] xl:text-xl h-full text-start pb-2 md:pb-4 xl:pb-8 pl-6">
                             <li>Welding</li>
                             <li>Lathe Work</li>
@@ -38,6 +40,7 @@ export default function Services() {
                         <h2 className="flex font-extrabold bg-blue-400 text-[13px] sm:text-lg md:text-xl xl:text-3xl text-center justify-center shadow-black shadow-lg rounded-lg p-2 m-3 border-2 border-gray-500">
                             Precision Machining:
                         </h2>
+
                         <ul className="font-bold text-black list-disc text-xs sm:text-[16px] md:text-lg/[24px] xl:text-xl h-full text-start pb-2 md:pb-4 xl:pb-8 pl-6">
                             <li>Thread Milling or Tapping</li>
                             <li>Custom Screws, Bolts, or Fittings</li>
