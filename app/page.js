@@ -1,11 +1,6 @@
 'use client'
 
 import Image from 'next/image';
-import HamburgerAnimated from "@/components/HamburgerAnimated";
-import ScrollablePage from "@/components/ScrollablePage";
-import Carousel from "@/components/Carousel";
-import AvailableServices from "@/components/AvailableServices";
-import Contacts from "@/components/Contacts";
 import NavigationBar from "@/components/NavigationBar";
 import Link from "next/link";
 import Services from "@/components/Services";
@@ -30,19 +25,19 @@ export default function Home() {
               <article className="grid grid-rows-6 grid-cols-1 h-full w-full relative">
 
                   {/*Slogan*/}
-                  <h1 className="flex font-extrabold text-yellow-200 row-start-2 row-end-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl z-10 text-center justify-self-center items-center backdrop-blur-lg backdrop-opacity-100 backdrop-saturate-50 self-start">Crafting
+                  {/*backdrop-filter backdrop-blur-lg backdrop-opacity-100 backdrop-saturate-50*/}
+                  <h1 className="flex font-extrabold text-yellow-200 row-start-2 row-end-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl z-20 text-center justify-self-center items-center shadow-2xl self-start">Crafting
                       Precision in Every Detail</h1>
 
                   {/*Identifies our goals and the purpose of the shop*/}
-                  <section
-                      className="z-10 flex flex-col shadow-black shadow-xl items-center w-2/3 row-start-3 row-end-4 justify-self-center h-fit p-4 bg-grayish-blue">
+                  <section className="z-20 flex flex-col shadow-black shadow-xl items-center w-2/3 row-start-3 row-end-4 justify-self-center h-fit p-4 bg-grayish-blue">
                       <button
                           className="bg-blue-400 rounded-2xl h-1/3 font-extrabold text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl m-4 p-2">Request
                           A Quote Now!
                       </button>
                       <h2 className="font-extrabold text-black text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl bg-grayish-blue tracking-wide pb-4">Tailored
                           Machining Services for Your Specific Needs:</h2>
-                      <p className="font-bold text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl bg-grayish-blue">Stellar
+                      <p className="font-bold text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl bg-grayish-blue text-center">Stellar
                           Metal&#8482; Takes on Many Jobs that Bigger Machine Shops Decline Due to Small Volume. We Help
                           Small Businesses and Startups Prototype and Produce Parts</p>
                   </section>
@@ -52,14 +47,17 @@ export default function Home() {
                       src="/machineshop/lathe-in-motion.jpg"
                       fill
                       style={{objectFit: "cover"}}
-                      className="absolute inset-0 z-0"
+                      className="z-0"
                       alt="Stellar Metal Machine Shop Lathe in Motion"
                   />
+                  <div className="absolute w-full bg-gradient-to-r from-black to-black h-full z-10 inset-0 opacity-40"></div>
+
 
                   {/*call to action*/}
                   <p className="w-full font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl row-start-6 row-end-7 self-end bg-blue-950 p-2 md:p-8 text-white border-t-4 border-b-4 border-gray-200 text-center z-20">
                       <Link href="contact" className="font-extrabold text-yellow-200">Click Here To Contact Us
-                          Today! </Link> We Work Directly with Each Customer to Provide Them With Exactly What They Need
+                          Today! </Link> We Work Directly with Each Customer to Provide Them With Exactly What They
+                      Need
                   </p>
               </article>
           </section>
