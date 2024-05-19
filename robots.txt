@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /backend/
+
+Sitemap: https://stellarmetalworks.com/sitemap.xml
