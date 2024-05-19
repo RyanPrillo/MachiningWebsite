@@ -5,8 +5,7 @@ import NavigationBar from "@/components/NavigationBar";
 import Link from "next/link";
 import Services from "@/components/Services";
 
-// 1946 American Pacemaker
-// 1979 Bridgeport Series 1
+// Site developed by Ryan Prillo | ryanprillo.business@gmail.com
 
 export default function Home() {
     // ScrollablePage({
@@ -48,6 +47,8 @@ export default function Home() {
                       fill
                       style={{objectFit: "cover"}}
                       className="z-0"
+                      placeholder="blur"
+                      quality={70}
                       alt="Stellar Metal Machine Shop Lathe in Motion"
                   />
                   <div className="absolute w-full bg-gradient-to-r from-black to-black h-full z-10 inset-0 opacity-40"></div>
@@ -69,6 +70,8 @@ export default function Home() {
                       <Image className="m-4 overflow-hidden rounded-xl shadow-black shadow-xl"
                              src="/machineshop/metalNutBefore.jpg"
                              alt="Lathe Metal Nut Before"
+                             placeholder="blur"
+                             quality={70}
                              width={200}
                              height={200}
                       />
@@ -76,6 +79,8 @@ export default function Home() {
                       <Image className="overflow-hidden rounded-xl shadow-black shadow-xl m-4"
                              src="/machineshop/metalNutAfter.jpg"
                              alt="Lathe Metal Nut After"
+                             placeholder="blur"
+                             quality={70}
                              width={200}
                              height={200}
                       />
@@ -104,6 +109,8 @@ export default function Home() {
                   <figure className="m-4 overflow-hidden rounded-xl shadow-black shadow-xl">
                       <Image className="justify-center"
                              src="/machineshop/cylinder.jpg"
+                             placeholder="blur"
+                             quality={70}
                              width={400}
                              height={400}
                              alt="Cylinder turned down in our lathe"
@@ -114,6 +121,8 @@ export default function Home() {
                   <figure className="m-4 overflow-hidden rounded-xl shadow-black shadow-xl">
                       <Image className="justify-center"
                              src="/machineshop/work-example-1.jpg"
+                             placeholder="blur"
+                             quality={70}
                              width={400}
                              height={400}
                              alt="This is an example of a handle made on our lathe and drill"
@@ -126,6 +135,8 @@ export default function Home() {
                   <figure className="m-4 overflow-hidden rounded-xl shadow-black shadow-xl">
                       <Image className="justify-center"
                              src="/machineshop/rod-drill.jpg"
+                             placeholder="blur"
+                             quality={70}
                              width={400}
                              height={400}
                              alt="A rod that was turned down in lathe, then drilled"
@@ -136,6 +147,8 @@ export default function Home() {
                   <figure className="m-4 overflow-hidden rounded-xl shadow-black shadow-xl">
                       <Image className="justify-center"
                              src="/machineshop/turningDown.jpg"
+                             placeholder="blur"
+                             quality={70}
                              width={400}
                              height={400}
                              alt="turning down"
@@ -160,6 +173,8 @@ export default function Home() {
               {/*the background image*/}
               <Image
                   src="/machineshop/lathe.jpg"
+                  placeholder="blur"
+                  quality={70}
                   height={450}
                   width={450}
                   style={{objectFit: "cover"}}
@@ -170,11 +185,6 @@ export default function Home() {
                   <Services/>
               </figure>
 
-          </section>
-
-          <section className="border-4 border-t-gray-400">
-              <h5 className="text-black font-bold text-center text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl tracking-wide pt-10">Overview
-                  of Our Services</h5>
           </section>
       </div>
   );

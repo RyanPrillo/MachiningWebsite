@@ -9,6 +9,8 @@ export default function AboutUs() {
             <figure className="flex justify-center pt-4 pb-4">
                 <Image className="p-4 m-8 border-4 justify-center"
                        src="/StellarMetalLogoExtended.svg"
+                       placeholder="blur"
+                       quality={70}
                        width={500}
                        height={100}
                        alt="Stellar Metal Machining Logo"
