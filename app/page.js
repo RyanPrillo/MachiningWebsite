@@ -49,6 +49,7 @@ export default function Home() {
                       className="z-0"
                       placeholder="blur"
                       quality={70}
+                      priority={true}
                       alt="Stellar Metal Machine Shop Lathe in Motion"
                   />
                   <div className="absolute w-full bg-gradient-to-r from-black to-black h-full z-10 inset-0 opacity-40"></div>
