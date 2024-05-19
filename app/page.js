@@ -186,11 +186,6 @@ export default function Home() {
               </figure>
 
           </section>
-
-          <section className="border-4 border-t-gray-400">
-              <h5 className="text-black font-bold text-center text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl tracking-wide pt-10">Overview
-                  of Our Services</h5>
-          </section>
       </div>
   );
 }
