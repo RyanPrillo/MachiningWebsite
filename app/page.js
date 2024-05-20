@@ -28,8 +28,7 @@ export default function Home() {
 
                   {/*Identifies our goals and the purpose of the shop*/}
                   <section className="black-overlay-bg z-20 flex flex-col shadow-black shadow-2xl items-center w-8/12 row-start-3 row-end-4 justify-self-center h-fit p-4">
-                      <button
-                          className="bg-bright-orange rounded-2xl w-5/12 h-1/3 font-extrabold text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl  m-1 sm:m-2 md:mb-4 lg:m-6 xl:m-8 p-2 hover:bg-darkened-bright-orange border-4 text-shadow-sm">Request
+                      <button className="bg-bright-orange rounded-2xl w-5/12 h-1/3 font-extrabold text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl  m-1 sm:m-2 md:mb-4 lg:m-6 xl:m-8 p-2 hover:bg-darkened-bright-orange border-4 text-shadow-sm" aria-label="Receive a quote">Request
                           A Quote Now!
                       </button>
                       <h2 className="font-extrabold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-wide pb-4 text-shadow-lg text-silver m-1 sm:m-2 md:mb-4 lg:m-6 xl:m-8">Tailored
@@ -56,7 +55,7 @@ export default function Home() {
 
                   {/*call to action*/}
                   <p className="w-full font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl row-start-6 row-end-7 self-end bg-blue-950 p-2 md:p-8 text-white border-t-4 border-b-4 border-gray-200 text-center z-20">
-                      <Link href="contact" className="font-extrabold text-yellow-200">Click Here To Contact Us
+                      <Link href="contact" className="font-extrabold text-yellow-200" aria-label="Go to our contact page">Click Here To Contact Us
                           Today! </Link> We Work Directly with Each Customer to Provide Them With Exactly What They
                       Need
                   </p>
@@ -89,6 +88,7 @@ export default function Home() {
                       <figcaption className="flex text-xl text-black items-center">Finished Product</figcaption>
                   </figure>
               </div>
+
               <article className="grid columns-1 rows-4 w-4/6 text-center h-full">
                   <h4 className="font-bold text-xl self-start pt-5 mr-5 mt-5 sm:text-xl md:text-2xl lg:text-3xl text-black tracking-normal lg:tracking-wide underline underline-offset-4">From
                       Metal, To Masterpiece!</h4>

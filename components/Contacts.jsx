@@ -8,7 +8,7 @@ export default function Contacts() {
             <div>
                 <FontAwesomeIcon icon={faEnvelope} style={{color: "#a6d0f3"}} size=""/>
             </div>
-            <Link href="/contact" className="text-yellow-200">Contact Us!</Link>
+            <Link href="/contact" aria-label="Go to our contacts page" className="text-yellow-200">Contact Us!</Link>
         </div>
     )
 }
