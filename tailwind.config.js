@@ -11,7 +11,11 @@ module.exports = {
         "light-orange": "#ffcc99",
         "grayish-blue": "#818ca8",
         "off-white": "#f7f7f7",
-        "off-white2": "#f0f0f0"
+        "off-white2": "#f0f0f0",
+        "bright-orange": "#FFA500",
+        "darkened-bright-orange": "#d98c00",
+        "light-gold": "#FFD700",
+        "silver": "#4A90E2",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
