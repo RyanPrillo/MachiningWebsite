@@ -29,6 +29,7 @@ export default function NavigationBar() {
                 <div className="flex items-center p-1 md:p-2 lg:p-3">
                     <Image className=""
                            src="/StellarMetalLogoSquare.svg"
+                           loading="eager"
                            width={150}
                            height={150}
                            alt="Stellar Metal Machining Logo"
