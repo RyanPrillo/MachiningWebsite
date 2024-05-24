@@ -33,8 +33,8 @@ export default function AboutUs() {
                 <header className="flex justify-center">
                     <h1 className="font-bold text-black p-3 w-1/2 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center">Our Services</h1>
                 </header>
-                <article className="bg-zinc-200 font-bold text-black p-3 w-1/2 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl w-full">
-                    Don't see what you need? <Link href="/contact" className="font-extrabold text-yellow-200" aria-label="Go to our contact page"> Contact us</Link> and we will try our best to get you exactly what you want!
+                <article className="bg-zinc-200 font-bold text-black p-3 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl w-full">
+                    Don&rsquo;t see what you need? <Link href="/contact" className="font-extrabold text-yellow-200" aria-label="Go to our contact page"> Contact us</Link> and we will try our best to get you exactly what you want!
                 </article>
             </section>
 
