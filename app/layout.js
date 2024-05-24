@@ -1,11 +1,6 @@
-import {Manrope, Space_Grotesk, Titillium_Web} from "next/font/google";
+import {manrope} from "@/app/fonts";
 import "./globals.css";
 import Head from "next/head";
-
-const manrope = Manrope({
-  subsets: ['latin'],
-  weight: ["variable"]
-})
 
 export const metadata = {
   title: "Stellar Metal Machining- Quality and Affordable Metal Work",

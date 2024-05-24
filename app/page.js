@@ -1,20 +1,42 @@
 'use client'
 
 import Image from 'next/image';
+import {robotoSlab} from "@/app/fonts";
 import NavigationBar from "@/components/NavigationBar";
 import Link from "next/link";
 import Services from "@/components/Services";
+import Accordion from "@/components/Accordion";
 
 // Site developed by Ryan Prillo | ryanprillo.business@gmail.com
 
 export default function Home() {
-    // ScrollablePage({
-    //     trackedElement: 'page-bottom',
-    //     containerElement: 'page-container'
-    // },)
-  return (
-      // creating the div containing the full page
-      <div className="justify-center h-full bg-zinc-200 w-full shadow-[0_35px_90px_-15px_rgba(0,0,0,0.3)] shadow-black" id="page-container">
+    const services = {
+        "Repair Services":
+        <ul className="accordion-body list-disc text-start">
+            <li>Motor Shaft Repair</li>
+            <li>Spindle Repair</li>
+            <li>Bolt Threads Repair</li>
+            <li>Metal Crack or Break Repair</li>
+            <li>Heli-Coil Fix</li>
+        </ul>,
+
+        "Basic Fabrication":
+        <ul className="accordion-body  list-disc text-start">
+            <li>Welding</li>
+            <li>Lathe Work</li>
+            <li>Drilling</li>
+            <li>Resurfacing</li>
+        </ul>,
+
+        "Precision Machining":
+        <ul className="accordion-body list-disc text-start">
+            <li>Thread Milling or Tapping</li>
+            <li>Custom Screws, Bolts, or Fittings</li>
+        </ul>
+}
+    return (
+        // creating the div containing the full page
+        <div className="justify-center h-full bg-zinc-200 w-full shadow-[0_35px_90px_-15px_rgba(0,0,0,0.3)] shadow-black" id="page-container">
           <header className="z-50 self-start w-full">
               <NavigationBar/>
           </header>
@@ -24,21 +46,22 @@ export default function Home() {
               <article className="grid grid-rows-6 grid-cols-1 h-full w-full relative">
 
                   {/*Slogan*/}
-                  <h1 className="flex font-extrabold text-light-gold row-start-2 row-end-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl z-20 text-center justify-self-center items-center self-start text-shadow-lg mb-2 ml-5 mr-5">Precision in Every Detail</h1>
+                  <h1 className={`${robotoSlab.className} flex font-extrabold text-light-gold row-start-2 row-end-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl z-20 text-center justify-self-center items-center self-start text-shadow-lg mb-2 ml-5 mr-5`}>Precision in Every Detail</h1>
 
                   {/*Identifies our goals and the purpose of the shop*/}
                   <section className="black-overlay-bg z-20 flex flex-col shadow-black shadow-2xl items-center w-8/12 row-start-3 row-end-4 justify-self-center h-fit p-4">
                       <button className="bg-bright-orange rounded-2xl w-5/12 h-1/3 font-extrabold text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl  m-1 sm:m-2 md:mb-4 lg:m-6 xl:m-8 p-2 hover:bg-darkened-bright-orange border-4 text-shadow-sm" aria-label="Receive a quote">Request
                           A Quote Now!
                       </button>
-                      <h2 className="font-extrabold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-wide pb-4 text-shadow-lg text-silver m-1 sm:m-2 md:mb-4 lg:m-6 xl:m-8">Tailored
-                          Machining Services for Your Specific Needs:</h2>
+                      <h2 className={`${robotoSlab.className} font-extrabold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-wide pb-4 text-shadow-lg text-silver m-1 sm:m-2 md:mb-4 lg:m-6 xl:m-8`}>
+                          Tailored Machining Services for Your Specific Needs:
+                      </h2>
                       <p className="text-sm sm:text-[16px] md:text-lg lg:text-xl xl:text-2xl text-center text-shadow-sm black-overlay-bg p-2 sm:p-3 md:p-4 lg:p-6 xl:p-8">Stellar
                           Metal Machining&#8482; Takes on Many Jobs that Bigger Machine Shops Decline Due to Small Volume. We Help
                           Small Businesses and Startups Prototype and Produce Parts.</p>
                   </section>
 
-                  {/*the background image, above the fold*/}
+                  {/*the background image, above the fold (LCP)*/}
                   <Image
                       src="/machineshop/lathe-in-motion.jpg"
                       fill
@@ -55,7 +78,7 @@ export default function Home() {
 
                   {/*call to action*/}
                   <p className="w-full font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl row-start-6 row-end-7 self-end bg-blue-950 p-2 md:p-8 text-white border-t-4 border-b-4 border-gray-200 text-center z-20">
-                      <Link href="contact" className="font-extrabold text-yellow-200" aria-label="Go to our contact page">Click Here To Contact Us
+                      <Link href="/contact" className="font-extrabold text-yellow-200" aria-label="Go to our contact page">Click Here To Contact Us
                           Today! </Link> We Work Directly with Each Customer to Provide Them With Exactly What They
                       Need
                   </p>
@@ -90,8 +113,8 @@ export default function Home() {
               </div>
 
               <article className="grid columns-1 rows-4 w-4/6 text-center h-full">
-                  <h4 className="font-bold text-xl self-start pt-5 mr-5 mt-5 sm:text-xl md:text-2xl lg:text-3xl text-black tracking-normal lg:tracking-wide underline underline-offset-4">From
-                      Metal, To Masterpiece!</h4>
+                  <h3 className={`${robotoSlab.className} font-bold text-xl self-start pt-5 mr-5 mt-5 sm:text-xl md:text-2xl lg:text-3xl text-black tracking-normal lg:tracking-wide underline underline-offset-4`}>From
+                      Metal, To Masterpiece!</h3>
                   <p className="font-semibold m-5 row-start-2 row-end-4 text-black w-3/5 justify-self-center text-sm md:text-sm lg:text-xl leading-normal md:leading-7 lg:leading-8">At
                       Stellar Metal Machining, every project is a journey towards perfection. We take great pride in
                       everything we do, from turning metal into finely crafted pieces, to repairing broken metal
@@ -102,9 +125,9 @@ export default function Home() {
           </section>
 
           <section className="flex flex-col justify-center w-full p-4 border-b-4 border-off-white h-1/2 items-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-black font-extrabold text-center underline p-6 h-1/3 decoration-blue-400">
+              <h4 className={`${robotoSlab.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-black font-extrabold text-center underline p-6 h-1/3 decoration-blue-400`}>
                   A Few of Our Projects:
-              </h2>
+              </h4>
 
               <article className="grid grid-col-2 md:grid-rows-2 md:grid-cols-3 w-2/3">
 
@@ -168,13 +191,13 @@ export default function Home() {
           </section>
 
           {/*A basic description of what the company specializes in*/}
-          <h3 className="flex font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl border-4 border-gray-400 w-full p-2 leading-4 md:leading-loose z-10 row-start-1 row-end-2 text-center justify-self-center backdrop-blur-sm backdrop-opacity-100 backdrop-saturate-50 bg-blue-950">
+          <h5 className={`${robotoSlab.className} flex font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl border-4 border-gray-400 w-full p-8 leading-4 md:leading-loose z-10 row-start-1 row-end-2 text-center justify-self-center backdrop-blur-sm backdrop-opacity-100 backdrop-saturate-50 bg-blue-950`}>
               <div className="justify-center self-center"><strong className="text-yellow-200">Stellar Metal
                   Machining</strong> Specializes in Product Prototyping, Small Parts Fabrication, Shaft + Spindle Repair, and Broken Bolt Removal
               </div>
-          </h3>
+          </h5>
 
-          <section className="flex h-screen mx-auto relative text-center shadow-black shadow-xl">
+          <section className="flex flex-col md:flex-row h-screen mx-auto relative text-center shadow-black shadow-xl">
 
               {/*the background image*/}
               <Image
@@ -185,11 +208,11 @@ export default function Home() {
                   height={450}
                   width={450}
                   style={{objectFit: "cover"}}
-                  className="z-0 rounded overflow-hidden basis-1/2"
+                  className="z-0 rounded overflow-hidden h-1/2 md:basis-1/2 md:h-full"
                   alt="Stellar Metal Machine Shop Lathe"
               />
-              <figure className="h-full flex flex-1 items-start z-20 p-5 justify-center">
-                  <Services/>
+              <figure className="flex items-start w-full bg-zinc-200 z-20 p-5 justify-center">
+                  <Accordion displayItems={services}/>
               </figure>
 
           </section>

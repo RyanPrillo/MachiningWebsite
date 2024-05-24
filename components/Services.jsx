@@ -1,9 +1,11 @@
+import {lora} from "@/app/fonts";
+
 export default function Services() {
     return (
         <div className="w-full h-4/5">
             <article className="w-full h-full z-10">
                 <div className="flex flex-col justify-between h-5/6 w-full">
-                    <h2 className="font-extrabold text-center text-lg sm:text-xl md:text-2xl xl:text-4xl tracking-wide col-start-2 justify-self-start mb-10 md:p-4 bg-blue-400 border-black border-2 shadow-black shadow-xl">Overview
+                    <h2 className={`${lora.className} font-extrabold text-black text-center text-lg sm:text-xl md:text-2xl xl:text-4xl tracking-wide col-start-2 justify-self-start mb-10 md:p-4 bg-blue-400 border-black border-2 shadow-black shadow-xl`}>Overview
                         of Our Services
                     </h2>
 
