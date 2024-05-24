@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
     async headers() {
@@ -16,8 +17,13 @@ const nextConfig = {
                         value: 'public, max-age=31536000',
                     }
                 ],
-            }
+            },
         ];
+    },
+    assetPrefix: isProd ? 'https://cdn.stellarmetalworks.com' : '',
+    images: {
+        loader: 'custom',
+        loaderFile: '/utils/imageLoader.js'
     }
 }
 
