@@ -19,7 +19,7 @@ const nextConfig = {
             },
         ];
     },
-    assetPrefix:  'https://cdn.stellarmetalworks.com' ,
+    assetPrefix: isProd ? 'https://cdn.stellarmetalworks.com' : '',
     images: {
         loader: 'custom',
         loaderFile: '/utils/imageLoader.js'
