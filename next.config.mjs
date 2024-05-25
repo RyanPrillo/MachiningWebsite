@@ -9,7 +9,7 @@ const nextConfig = {
 
         return [
             {
-                source: '/:all*(css|js|gif|svg|jpg|jpeg|png|woff|woff2)',
+                source: '/public/*',
                 locale: false,
                 headers: [
                     {
@@ -18,6 +18,14 @@ const nextConfig = {
                     }
                 ],
             },
+            {
+                source: "/_next/static/media/:path*",
+                headers: [
+                        {key: 'Access-Control-Allow-Origin', value: '*'},
+                        {key: 'Access-Control-Allow-Methods', value: 'GET'},
+                        {key: 'Access-Control-Allow-Headers', value: 'Content-Type'}
+                ]
+            }
         ];
     },
     assetPrefix: isProd ? 'https://cdn.stellarmetalworks.com' : '',
