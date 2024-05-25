@@ -6,5 +6,6 @@ export function middleware(request) {
     if (url.pathname.indexOf("/_next/static/media") > -1) {
         url.hostname = url.hostname.replace("cdn.", "")
     }
+
     return NextResponse.rewrite(url);
 }
