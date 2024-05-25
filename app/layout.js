@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <body className={manrope.className}>
     <link rel="icon" href="/favicon-32x32.png" sizes="any"/>
     {children}
-    <GoogleTagManager gtmId="G-EBM68P9FBM"/>
+    {/*<GoogleTagManager gtmId="G-EBM68P9FBM"/>*/}
     </body>
     </html>
   );
