@@ -8,7 +8,7 @@ const nextConfig = {
 
         return [
             {
-                source: '/public/*',
+                source: '/public/:path*',
                 locale: false,
                 headers: [
                     {
