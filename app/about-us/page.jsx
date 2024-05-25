@@ -60,8 +60,7 @@ export default function AboutUs() {
                     <blockquote className="text-blue-400 tracking-wide bg-off-white2 p-5 border-l-4 border-solid border-gray-500 w-1/2 m-5 italic">
                         <p>&#x0022; We Believe even the smallest details can make the biggest difference &#x0022;</p>
                     </blockquote>
-                    Our commitment to detail is unmatched. We believe even the smallest details can make the biggest
-                    that every project isn&rsquo;t just completed, but perfected.
+                    Our commitment to detail is unmatched. We believe even the smallest details can make the biggest difference. We ensure that every project isn&rsquo;t just completed, but perfected.
                 </section>
 
                 <section className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
