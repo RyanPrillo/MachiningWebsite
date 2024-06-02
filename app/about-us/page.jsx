@@ -101,7 +101,7 @@ export default function AboutUs() {
                         </figcaption>
                         <Image className="m-4 overflow-hidden rounded"
                                src="/machineshop/pillar-drill.jpg"
-                               alt="Our 1979 Bridgeport Series 1 Machine"
+                               alt="Our 1979 Bridgeport Series 1 Drill"
                                width={400}
                                height={400}
                         />

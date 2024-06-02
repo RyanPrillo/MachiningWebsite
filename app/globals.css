@@ -68,7 +68,7 @@ body {
     }
 
     .accordion-body {
-      @apply text-sm md:text-lg lg:text-xl xl:text-2xl bg-off-white mb-10 pl-10 w-full;
+      @apply text-sm md:text-lg lg:text-xl xl:text-2xl bg-off-white mb-10 pl-10 w-full shadow shadow-black font-bold;
     }
   }
 }

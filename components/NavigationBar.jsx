@@ -51,30 +51,28 @@ export default function NavigationBar() {
 
                     </div>
 
-                    <div className="grid lg:flex lg:space-x-8 lg:items-center lg:justify-center h-full p-4">
+                    <div className="grid xl:flex xl:space-x-8 xl:items-center xl:justify-center h-full p-4">
 
                         {/*The first grid, switches to have no columns at device sizes greater than 1024px in order to make the nav links in-line*/}
-                        <div className="grid grid-cols-2 lg:grid-cols-none gap-8 lg:flex lg:space-x-4 items-center">
-                            <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-bold md:whitespace-nowrap whitespace-normal text-white">
+                        <div className="grid grid-cols-2 xl:grid-cols-none gap-8 xl:flex xl:space-x-4 items-center">
+                            <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold md:whitespace-nowrap whitespace-normal text-white">
                                 <Link href="/about-us" aria-label="Learn about our shop">About Our Shop</Link>
                             </div>
 
-                            {/*<FontAwesomeIcon icon={faFolderOpen} style={{color: "#6b7be8"}} size="3x" className="pt-10 pr-4"/>*/}
-
-                            <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-bold md:whitespace-nowrap whitespace-normal text-white">
+                            <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold md:whitespace-nowrap whitespace-normal text-white">
                                 <Link href="/example-work" aria-label="View our example work">Example Work</Link>
                             </div>
                         </div>
 
 
                         {/*The second grid, which just like the above one, switches at device sizes greater than 1024px to have no columns in order to make the nav links in-line*/}
-                        <div className="grid grid-cols-2 lg:grid-cols-none gap-8 lg:flex lg:space-x-4 items-center">
+                        <div className="grid grid-cols-2 xl:grid-cols-none gap-8 xl:flex xl:space-x-4 items-center">
 
-                            <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-bold md:whitespace-nowrap whitespace-normal text-white">
+                            <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold md:whitespace-nowrap whitespace-normal text-white">
                                 <Link href="/services" aria-label="View our list of services">Services</Link>
                             </div>
 
-                            <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-bold md:whitespace-nowrap whitespace-normal">
+                            <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold md:whitespace-nowrap whitespace-normal">
                                 {/*A React component which has an email icon, as well as the link to the contacts page*/}
                                 <Contacts />
                             </div>

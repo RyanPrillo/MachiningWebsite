@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function Accordion({displayItems}) {
+export default function Accordion({displayItems, iconsList}) {
 
     // initialize a boolean array with the amount of display items given, all set to false because we want the sections to be closed by default
     const [openSections, setOpenSections] = useState(new Array(Object.keys(displayItems).length).fill(false));
@@ -19,8 +19,9 @@ export default function Accordion({displayItems}) {
                     <button onClick={() => updateAccordion(index)} className="accordion-button" aria-label="Expand repair work list">
                         <span className="accordion-plus-icon">{isOpen ? "-" : "+"}</span>
                         <span className="accordion-header-text">{Object.keys(displayItems)[index]}</span>
+                        <span>{iconsList[index]}</span>
                     </button>
-                    <article className={`w-full ${isOpen ? "" : "hidden"} `}>
+                    <article className={`rounded overflow-hidden w-full ${isOpen ? "" : "hidden"} `}>
                         {displayItems[Object.keys(displayItems)[index]]}
                     </article>
                 </div>
