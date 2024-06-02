@@ -94,7 +94,7 @@ export default function QuoteRequestForm() {
                 <FormSubmitPopup isOpen={openDialog} formSuccess={submitSuccess}/>
 
                 {/*use mui grid to organize the form elements*/}
-                <Grid className="w-full justify-center text-center" container item spacing={6}>
+                <Grid className="w-full justify-center text-center" container item>
 
                     {/*section for contact info*/}
                     <section className="w-full justify-center">
