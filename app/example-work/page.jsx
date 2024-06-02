@@ -31,11 +31,11 @@ export default function ExampleWork() {
             </header>
 
             <section className="flex flex-col justify-center text-center p-8 bg-zinc-200 m-4">
-                <div className="flex justify-center text-center p-10">
-                    <h2 className="underline decoration-yellow-200 font-extrabold text-black bg-zinc-200 p-6 w-1/2 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Here are Some of Our Projects:</h2>
+                <div className="flex justify-center text-center pb-10 pt-10">
+                    <h2 className="underline decoration-yellow-200 font-extrabold text-black bg-zinc-200 p-6 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Here are Some of Our Projects:</h2>
                 </div>
 
-                <main className="grid grid-rows-2 grid-cols-3">
+                <main className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row w-2/3 self-center">
 
                     <figure className="bg-off-white shadow-gray-600 shadow-xl m-7 rounded-lg">
                         <Image className="p-7 justify-center"
@@ -67,7 +67,7 @@ export default function ExampleWork() {
                         <figcaption className="p-4 text-black font-extrabold"></figcaption>
                     </figure>
 
-                    <figure className="relative bg-off-white shadow-gray-600 shadow-xl m-7 h-2/3 rounded-lg">
+                    <figure className="relative bg-off-white shadow-gray-600 shadow-xl m-7 rounded-lg">
                         <Image className="p-7 justify-center"
                                src="/machineshop/turningDown.jpg"
                                width={600}
