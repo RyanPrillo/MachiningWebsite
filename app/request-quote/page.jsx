@@ -41,7 +41,7 @@ export default async function AboutUs() {
                         content: "Stellar Metal Machining",
                     },
                 ]}
-                images: {[
+                images={[
                     "public/StellarMetalLogoExtended.svg"
                 ]}
                 additionalLinkTags={[

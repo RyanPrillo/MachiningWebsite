@@ -74,7 +74,7 @@ export default async function Home() {
                         content: "Stellar Metal Machining",
                     },
                 ]}
-                images: {[
+                images={[
                 "public/machineshop/lathe-in-motion.jpg",
                 "public/machineshop/metalNutBefore.jpg",
                 "public/machineshop/metalNutAfter.jpg",
@@ -83,7 +83,7 @@ export default async function Home() {
                 "public/machineshop/rod-drill.jpg",
                 "public/machineshop/turningDown.jpg",
                 "public/machineshop/lathe.jpg",
-            ]}
+                ]}
                 additionalLinkTags={[
                     {
                         rel: 'icon',

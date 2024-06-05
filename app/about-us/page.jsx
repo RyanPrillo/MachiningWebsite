@@ -40,7 +40,7 @@ export default async function AboutUs() {
                         content: "Stellar Metal Machining",
                     },
                 ]}
-                images: {[
+                images={[
                 "public/StellarMetalLogoExtended.svg",
                 "public/machineshop/lathe-wide-angle.jpg",
                 "public/machineshop/pillar-drill.jpg",

@@ -41,7 +41,7 @@ export default async function ExampleWork() {
                         content: "Stellar Metal Machining",
                     },
                 ]}
-                images: {[
+                images={[
                 "public/StellarMetalLogoExtended.svg",
                 "public/machineshop/cylinder.jpg",
                 "public/machineshop/cylinder.jpg",
