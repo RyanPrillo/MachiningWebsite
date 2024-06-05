@@ -1,3 +1,4 @@
+'use client'
 import {zodResolver} from "@hookform/resolvers/zod"
 import {Controller, useForm} from "react-hook-form";
 import {quoteSchema} from "@/assets/quoteSchema"
@@ -96,12 +97,12 @@ export default function QuoteRequestForm() {
                 {/*use mui grid to organize the form elements*/}
                 <Grid className="w-full justify-center text-center" container item>
 
-                    {/*section for contact info*/}
+                    {/*section for request-quote info*/}
                     <section className="w-full justify-center">
                         <h1 className="text-black pb-20 underline text-xl md:text-2xl lg:text-3xl xl:text-4xl">Enter
                             Your Contact Information</h1>
 
-                        {/*another grid container to organize the contact section*/}
+                        {/*another grid container to organize the request-quote section*/}
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={4}>
                                 <Controller name="firstName" control={control}

@@ -1,12 +1,58 @@
-'use client'
 import Image from "next/image";
 import NavigationBar from "@/components/NavigationBar";
 import {lora, robotoSlab} from "@/app/fonts";
 import QuoteRequestForm from "@/components/QuoteRequestForm";
+import {NextSeo} from "next-seo";
 
-export default function AboutUs() {
+export default async function AboutUs() {
+
+    const jsonLdData = {
+        "@context": "https://schema.org",
+        "@type": "RequestQuotePage",
+        "mainEntity": {
+            "@type": "Service",
+            "name": "Custom Machining Services",
+            "description": "Request a quote for custom machining services from Stellar Metal Machining.",
+            "url": "https://www.stellarmetalworks.com/request-quote/",
+            "logo": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg",
+        }
+    }
+
     return (
         <article className="bg-white">
+
+            <NextSeo
+                title="Request a Quote | Stellar Metal Machining"
+                description="Request a quote for custom machining services from Stellar Metal Machining."
+                canonical="https://www.stellarmetalworks.com/request-quote"
+                openGraph={{
+                    title: 'Stellar Metal Machining',
+                    description: "Request a quote for custom machining services from Stellar Metal Machining.",
+                    url: 'https://www.stellarmetalworks.com/request-quote/',
+                    type: "website"
+                }}
+                additionalMetaTags={[
+                    {
+                        name: "keywords",
+                        content: "custom machining quote, request a machining quote, machining services quote, quote for metalwork services, custom metal parts quote, prototype machining quote, machining cost estimate, online machining quote, custom metalwork estimate"
+                    },
+                    {
+                        name: "application-name",
+                        content: "Stellar Metal Machining",
+                    },
+                ]}
+                images: {[
+                    "public/StellarMetalLogoExtended.svg"
+                ]}
+                additionalLinkTags={[
+                    {
+                        rel: 'icon',
+                        href: 'app/favicon.ico',
+                    },
+                ]}
+                jsonLd={jsonLdData}
+            />
+
             <NavigationBar />
             <figure className="flex justify-center pt-4 pb-4">
                 <Image className="m-8 border-4 justify-center"
@@ -22,8 +68,7 @@ export default function AboutUs() {
             </figure>
             <div className="flex flex-col text-center justify-center items-center p-10">
                 <p className={`${lora.className} font-extrabold text-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pb-32 pt-10`}>&quot;Precision in Every Detail&quot;</p>
-                <h1 className="font-bold bg-blue-950 p-6 w-1/2 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl center">Contact
-                    Us!</h1>
+                <h1 className="font-bold bg-blue-950 p-6 w-1/2 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl center">Receive a Quote or Contact Us!</h1>
             </div>
 
             <section className="xs:h-[120rem] sm:h-[85em] flex flex-col items-center bg-zinc-200 w-full pt-10 border-t-gray-400 border-4">

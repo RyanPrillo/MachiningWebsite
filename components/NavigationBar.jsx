@@ -1,8 +1,9 @@
+'use client'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBriefcase, faEnvelope, faFolderOpen, faHome, faInfo} from "@fortawesome/free-solid-svg-icons";
+import {faHome} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
-import Contacts from "@/components/Contacts";
+import QuoteButton from "@/components/QuoteButton";
 import {useInView} from "react-intersection-observer";
 import {useEffect, useRef, useState} from "react";
 export default function NavigationBar() {
@@ -28,9 +29,7 @@ export default function NavigationBar() {
             {/* Invisible div at the top of the content to observe */}
             <div ref={ref} className="">
                 <div ref={navBarRef} className={`transition-all ease-in-out duration-300 ${inView ? "" : ""} ${navBarHeight === 0 ? "invisible" : ""} h-40 fixed top-0 flex w-full z-50 bg-blue-950 border-b-2 border-gray-400 items-center justify-evenly`}>
-
                     <div className="flex items-center z-50 h-full text-center">
-
                         <div className="flex items-center p-1 md:p-2 lg:p-3">
                             <Image className=""
                                    src="/StellarMetalLogoSquare.svg"
@@ -74,7 +73,7 @@ export default function NavigationBar() {
 
                             <div className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold md:whitespace-nowrap whitespace-normal">
                                 {/*A React component which has an email icon, as well as the link to the contacts page*/}
-                                <Contacts />
+                                <QuoteButton />
                             </div>
 
                         </div>

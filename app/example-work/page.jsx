@@ -1,14 +1,72 @@
-'use client'
 import Image from "next/image";
 import NavigationBar from "@/components/NavigationBar";
 import {lora} from "@/app/fonts";
+import {NextSeo} from "next-seo";
 
-export default function ExampleWork() {
+export default async function ExampleWork() {
+
+    const jsonLdData = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "mainEntity": {
+            "@type": "CreativeWork",
+            "name": "Examples of Our Work",
+            "description": "Explore examples of custom machining projects by Stellar Metal Machining.",
+            "url": "https://www.stellarmetalworks.com/example-work/",
+            "logo": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg",
+        }
+    }
+
     return (
+
         <article className="bg-white">
 
+            <NextSeo
+                title="Example Work | Stellar Metal Machining"
+                description="Explore examples of custom machining projects by Stellar Metal Machining."
+                canonical="https://www.stellarmetalworks.com/example-work"
+                openGraph={{
+                    title: 'Example Work | Stellar Metal Machining',
+                    description: "Explore examples of custom machining projects by Stellar Metal Machining.",
+                    url: 'https://www.stellarmetalworks.com/example-work/',
+                    type: "website"
+                }}
+                additionalMetaTags={[
+                    {
+                        name: "keywords",
+                        content: "custom machining, metalworking projects, precision machining, metal fabrication, welding, custom metal parts"
+                    },
+                    {
+                        name: "application-name",
+                        content: "Stellar Metal Machining",
+                    },
+                ]}
+                images: {[
+                "public/StellarMetalLogoExtended.svg",
+                "public/machineshop/cylinder.jpg",
+                "public/machineshop/cylinder.jpg",
+                "public/machineshop/work-example-1.jpg",
+                "public/machineshop/rod-drill.jpg",
+                "public/machineshop/turningDown.jpg",
+                ]}
+                additionalLinkTags={[
+                    {
+                        rel: 'icon',
+                        href: 'app/favicon.ico',
+                    },
+                ]}
+                jsonLd={jsonLdData}
+            />
+
+            {/*<Head>*/}
+            {/*    <title>Our Projects | Stellar Metal Machining</title>*/}
+            {/*    <meta name="description" content="Explore our portfolio of custom metalworking projects, showcasing precision machining and expert craftsmanship at Stellar Metal Machining."/>*/}
+            {/*    <meta name="keywords" content="custom machining, metalworking projects, precision machining, metal fabrication, welding, custom metal parts"/>*/}
+            {/*    <link rel="canonical" href="https://www.stellarmetalworks.com/example-work"/>*/}
+            {/*</Head>*/}
+
             <header className="border-b-8 border-gray-500">
-                <NavigationBar />
+                <NavigationBar/>
 
                 <figure className="flex justify-center pt-4 pb-4">
                     <Image className="m-8 border-4 justify-center"

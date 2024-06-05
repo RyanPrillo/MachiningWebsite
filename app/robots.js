@@ -7,6 +7,6 @@ export default function robots() {
                 disallow: '/admin/',
             }
         ],
-        sitemap: 'https://stellarmetalworks.com/sitemap.xml',
+        sitemap: 'https://stellarmetalworks.com/public/sitemap.xml',
     }
 }

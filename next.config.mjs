@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
+
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
     async headers() {
         if (!isProd) {
@@ -14,16 +16,17 @@ const nextConfig = {
                     {
                         key: 'Cache-Control',
                         value: 'public, max-age=31536000',
-                    }
+                    },
                 ],
             },
         ];
     },
     assetPrefix: isProd ? 'https://cdn.stellarmetalworks.com' : '',
-    images: {
-        loader: 'custom',
-        loaderFile: '/utils/imageLoader.js'
-    },
-}
+    images: isProd
+        ? {
+            loader: 'custom',
+            loaderFile: './utils/imageLoader.js',
+        } : {},
+};
 
 export default nextConfig;

@@ -1,12 +1,59 @@
-'use client'
 import Image from "next/image";
 import NavigationBar from "@/components/NavigationBar";
 import Link from "next/link";
 import {lora} from "@/app/fonts";
+import { NextSeo } from 'next-seo';
 
-export default function AboutUs() {
+export default async function AboutUs() {
+    const jsonLdData = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "About Stellar Metal Machining",
+            "description": "Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer.",
+            "url": "https://www.stellarmetalworks.com/about-us/",
+            "logo": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg",
+        }
+    };
+
     return (
         <article className="bg-white">
+
+            <NextSeo
+                title="About Us | Stellar Metal Machining"
+                description="Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer."
+                canonical="https://www.stellarmetalworks.com/about-us"
+                openGraph={{
+                    title: 'About Us | Stellar Metal Machining',
+                    description: "Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer.",
+                    url: 'https://www.stellarmetalworks.com/about-us/',
+                    type: "website"
+                }}
+                additionalMetaTags={[
+                    {
+                        name: "keywords",
+                        content: "about us, Stellar Metal Machining, custom machining, precision machining, metalwork, company history, team, mission"
+                    },
+                    {
+                        name: "application-name",
+                        content: "Stellar Metal Machining",
+                    },
+                ]}
+                images: {[
+                "public/StellarMetalLogoExtended.svg",
+                "public/machineshop/lathe-wide-angle.jpg",
+                "public/machineshop/pillar-drill.jpg",
+                ]}
+                additionalLinkTags={[
+                    {
+                        rel: 'icon',
+                        href: 'app/favicon.ico',
+                    },
+                ]}
+                jsonLd={jsonLdData}
+            />
+
             <NavigationBar/>
             <figure className="flex justify-center pt-4 pb-4">
                 <Image className="m-8 border-4 justify-center"
