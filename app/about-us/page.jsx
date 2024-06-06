@@ -2,7 +2,35 @@ import Image from "next/image";
 import NavigationBar from "@/components/NavigationBar";
 import Link from "next/link";
 import {lora} from "@/app/fonts";
-import { NextSeo } from 'next-seo';
+import DOMPurify from 'isomorphic-dompurify';
+
+export const metadata = {
+    title: 'About Us | Stellar Metal Machining',
+    openGraph: {
+        title: 'About Us | Stellar Metal Machining',
+        description: "Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer.",
+        images: [
+            {
+                url: 'https://www.stellarmetalworks.com/public/StellarMetalLogoSquare.svg',
+                width: 400,
+                height: 400,
+                alt: 'Stellar Metal Machining Logo'
+            },
+            {
+                url: "https://www.stellarmetalworks.com/public/machineshop/lathe-wide-angle.jpg",
+                width: 400,
+                height: 400,
+                alt: 'Our 1946 American Pacemaker Lathe'
+            },
+            {
+               url:  "https://www.stellarmetalworks.com/public/machineshop/pillar-drill.jpg",
+                width: 400,
+                height: 400,
+                alt: "Our 1979 Bridgeport Series 1 Drill"
+            }
+        ]
+    },
+}
 
 export default async function AboutUs() {
     const jsonLdData = {
@@ -14,45 +42,70 @@ export default async function AboutUs() {
             "description": "Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer.",
             "url": "https://www.stellarmetalworks.com/about-us/",
             "logo": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg",
-        }
+            "founder": {
+                "@type": "Person",
+                "name": "Thomas P"
+            },
+            "foundingDate": "2024-03-05",
+            "location": {
+                "@type": "Place",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Mount Olive",
+                    "addressRegion": "NJ",
+                    "postalCode": "07828",
+                    "addressCountry": "US"
+                }
+            }
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Sales",
+            "email": "stellarmetal.sales@gmail.com",
+            "url": "https://www.stellarmetalworks.com/request-quote"
+        },
     };
 
     return (
         <article className="bg-white">
-
-            <NextSeo
-                title="About Us | Stellar Metal Machining"
-                description="Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer."
-                canonical="https://www.stellarmetalworks.com/about-us"
-                openGraph={{
-                    title: 'About Us | Stellar Metal Machining',
-                    description: "Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer.",
-                    url: 'https://www.stellarmetalworks.com/about-us/',
-                    type: "website"
-                }}
-                additionalMetaTags={[
-                    {
-                        name: "keywords",
-                        content: "about us, Stellar Metal Machining, custom machining, precision machining, metalwork, company history, team, mission"
-                    },
-                    {
-                        name: "application-name",
-                        content: "Stellar Metal Machining",
-                    },
-                ]}
-                images={[
-                "public/StellarMetalLogoExtended.svg",
-                "public/machineshop/lathe-wide-angle.jpg",
-                "public/machineshop/pillar-drill.jpg",
-                ]}
-                additionalLinkTags={[
-                    {
-                        rel: 'icon',
-                        href: 'app/favicon.ico',
-                    },
-                ]}
-                jsonLd={jsonLdData}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(JSON.stringify(jsonLdData))}}
             />
+
+            {/*<NextSeo*/}
+            {/*    title="About Us | Stellar Metal Machining"*/}
+            {/*    description="Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer."*/}
+            {/*    canonical="https://www.stellarmetalworks.com/about-us"*/}
+            {/*    openGraph={{*/}
+            {/*        title: 'About Us | Stellar Metal Machining',*/}
+            {/*        description: "Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer.",*/}
+            {/*        url: 'https://www.stellarmetalworks.com/about-us/',*/}
+            {/*        type: "website"*/}
+            {/*    }}*/}
+            {/*    additionalMetaTags={[*/}
+            {/*        {*/}
+            {/*            name: "keywords",*/}
+            {/*            content: "about us, Stellar Metal Machining, custom machining, precision machining, metalwork, company history, team, mission"*/}
+            {/*        },*/}
+            {/*        {*/}
+            {/*            name: "application-name",*/}
+            {/*            content: "Stellar Metal Machining",*/}
+            {/*        },*/}
+            {/*    ]}*/}
+            {/*    images={[*/}
+            {/*    "public/StellarMetalLogoExtended.svg",*/}
+            {/*    "public/machineshop/lathe-wide-angle.jpg",*/}
+            {/*    "public/machineshop/pillar-drill.jpg",*/}
+            {/*    ]}*/}
+            {/*    additionalLinkTags={[*/}
+            {/*        {*/}
+            {/*            rel: 'icon',*/}
+            {/*            href: 'app/favicon.ico',*/}
+            {/*        },*/}
+            {/*    ]}*/}
+            {/*    jsonLd={jsonLdData}*/}
+            {/*/>*/}
 
             <NavigationBar/>
             <figure className="flex justify-center pt-4 pb-4">
@@ -67,14 +120,16 @@ export default async function AboutUs() {
                 />
             </figure>
             <div className="flex flex-col text-center justify-center items-center m-10">
-                <p className={`${lora.className} font-extrabold text-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pb-32 pt-10`}>&quot;Precision in Every Detail&quot;</p>
+                <p className={`${lora.className} font-extrabold text-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pb-32 pt-10`}>&quot;Precision
+                    in Every Detail&quot;</p>
                 <h1 className="font-bold text-black bg-medium-gray p-6 w-1/2 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">About
                     Stellar Metal Machining</h1>
             </div>
 
             <section className="flex flex-col border-t-4 border-t-gray-400 justify-center items-center bg-zinc-200">
-                <header className="flex text-center justify-center m-20 font-bold text-black w-4/5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl underline decoration-blue-400 decoration-4 tracking-wide">
-                <h1>Our Story</h1>
+                <header
+                    className="flex text-center justify-center m-20 font-bold text-black w-4/5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl underline decoration-blue-400 decoration-4 tracking-wide">
+                    <h1>Our Story</h1>
                 </header>
 
                 <h1 className="font-bold text-black bg-grayish-blue p-10 w-4/5 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center">
@@ -83,18 +138,23 @@ export default async function AboutUs() {
                     precision machining.
                 </h1>
 
-                <section className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
-                    <h2 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">A Mechanic&rsquo;s Precision, A Machinist&rsquo;s Artistry</h2>
+                <section
+                    className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
+                    <h2 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">A
+                        Mechanic&rsquo;s Precision, A Machinist&rsquo;s Artistry</h2>
                     From the intricate workings of engine components, to the precise demands of custom metal
-                    projects, Thomas P.&rsquo;s journey began in the bustling shops of auto repair. He honed his attention to
+                    projects, Thomas P.&rsquo;s journey began in the bustling shops of auto repair. He honed his
+                    attention to
                     detail and focus on doing the job right, no matter the task. His passion for perfection didn&rsquo;t
                     stop at mechanics, though. Over the years, his passion developed into machining and the precise
                     nature of it. Every free moment he had, was spent in his workshop, honing his abilities as a
                     machinist.
                 </section>
 
-                <section className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
-                    <h3 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Crafted with Care</h3>
+                <section
+                    className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
+                    <h3 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Crafted
+                        with Care</h3>
                     Stellar Metal isn&rsquo;t just a business; it is the culmination of countless hours of disciplined
                     craftsmanship and a relentless pursuit for perfection. Here, we specialize one-off projects, and
                     custom-made pieces that many larger machine shops won&rsquo;t take on due to a small volume. Whether
@@ -102,23 +162,30 @@ export default async function AboutUs() {
                     prototype, we exhibit great care and precision for every project we take on.
                 </section>
 
-                <section className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
-                    <h4 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Driven by Detail</h4>
-                    <blockquote className="text-blue-400 tracking-wide bg-off-white2 p-5 border-l-4 border-solid border-gray-500 w-1/2 m-5 italic">
+                <section
+                    className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
+                    <h4 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Driven
+                        by Detail</h4>
+                    <blockquote
+                        className="text-blue-400 tracking-wide bg-off-white2 p-5 border-l-4 border-solid border-gray-500 w-1/2 m-5 italic">
                         <p>&#x0022; We Believe even the smallest details can make the biggest difference &#x0022;</p>
                     </blockquote>
-                    Our commitment to detail is unmatched. We believe even the smallest details can make the biggest difference. We ensure that every project isn&rsquo;t just completed, but perfected.
+                    Our commitment to detail is unmatched. We believe even the smallest details can make the biggest
+                    difference. We ensure that every project isn&rsquo;t just completed, but perfected.
                 </section>
 
-                <section className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
-                    <h5 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Join Us</h5>
+                <section
+                    className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
+                    <h5 className="font-bold bg-grayish-blue text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Join
+                        Us</h5>
                     We invite you to bring your unique challenges to us. No project is too small, no detail too minor.
                     At Stellar Metal Machining, we work with you to get you exactly what you want. Let us turn your
                     ideas into reality!
                 </section>
 
                 <p className="font-bold text-black bg-blue-400 p-8 w-4/5 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center m-10">
-                    <Link href="/contact" className="text-yellow-200 underline">Contact us today</Link> to discuss your project!
+                    <Link href="/contact" className="text-yellow-200 underline">Contact us today</Link> to discuss your
+                    project!
                 </p>
             </section>
 
@@ -136,7 +203,7 @@ export default async function AboutUs() {
                         </figcaption>
                         <Image className="m-4 overflow-hidden rounded"
                                src="/machineshop/lathe-wide-angle.jpg"
-                               alt="Our 1946 American Pacemaker"
+                               alt="Our 1946 American Pacemaker Lathe"
                                width={400}
                                height={400}
                         />

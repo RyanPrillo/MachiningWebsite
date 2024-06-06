@@ -1,7 +1,47 @@
 import Image from "next/image";
 import NavigationBar from "@/components/NavigationBar";
 import {lora} from "@/app/fonts";
-import {NextSeo} from "next-seo";
+import DOMPurify from 'isomorphic-dompurify';
+
+export const metadata = {
+    title: "Example Work | Stellar Metal Machining",
+    openGraph: {
+        title: "Example Work | Stellar Metal Machining",
+        description: "Explore examples of custom machining projects by Stellar Metal Machining.",
+        images: [
+            {
+                url: 'https://www.stellarmetalworks.com/public/StellarMetalLogoSquare.svg',
+                width: 400,
+                height: 400,
+                alt: 'Stellar Metal Machining Logo'
+            },
+            {
+                url:  "https://www.stellarmetalworks.com/public/machineshop/cylinder.jpg",
+                width: 400,
+                height: 400,
+                alt: "Cylinder turned down in our lathe"
+            },
+            {
+                url:  "https://www.stellarmetalworks.com/public/machineshop/work-example-1.jpg",
+                width: 400,
+                height: 400,
+                alt: "This is an example of a handle made on our lathe and drill"
+            },
+            {
+                url:  "https://www.stellarmetalworks.com/public/machineshop/rod-drill.jpg",
+                width: 400,
+                height: 400,
+                alt: "A rod that was turned down in lathe, then drilled"
+            },
+            {
+                url:  "https://www.stellarmetalworks.com/public/machineshop/turningDown.jpg",
+                width: 400,
+                height: 400,
+                alt: "Turning down A piece of metal to be press fit"
+            },
+        ]
+    },
+}
 
 export default async function ExampleWork() {
 
@@ -14,56 +54,84 @@ export default async function ExampleWork() {
             "description": "Explore examples of custom machining projects by Stellar Metal Machining.",
             "url": "https://www.stellarmetalworks.com/example-work/",
             "logo": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg",
-        }
+            "hasPart": [
+                {
+                    "@type": "ImageObject",
+                    "name": "Cylinder turned down in our lathe",
+                    "contentUrl": "https://www.stellarmetalworks.com/public/machineshop/cylinder.jpg",
+                    "caption": "Cylinder turned down in our lathe"
+                },
+                {
+                    "@type": "ImageObject",
+                    "name": "Custom Handle",
+                    "contentUrl": "https://www.stellarmetalworks.com/public/machineshop/work-example-1.jpg",
+                    "caption": "This is an example of a handle made on our lathe and drill. It was turned down on our lathe, with any necessary holes drilled with our pillar drill."
+                },
+                {
+                    "@type": "ImageObject",
+                    "name": "Rod that was turned down in lathe, then drilled",
+                    "contentUrl": "https://www.stellarmetalworks.com/public/machineshop/rod-drill.jpg",
+                    "caption": "A rod that was turned down in lathe, then drilled."
+                },
+                {
+                    "@type": "ImageObject",
+                    "name": "Rod that needed to be a pressed fit, which was turned down in our lathe",
+                    "contentUrl": "https://www.stellarmetalworks.com/public/machineshop/turningDown.jpg",
+                    "caption": "Here is a rod that needed to be a pressed fit, which was turned down in our lathe."
+                }
+            ]
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Sales",
+            "email": "stellarmetal.sales@gmail.com",
+            "url": "https://www.stellarmetalworks.com/request-quote"
+        },
     }
 
     return (
 
         <article className="bg-white">
-
-            <NextSeo
-                title="Example Work | Stellar Metal Machining"
-                description="Explore examples of custom machining projects by Stellar Metal Machining."
-                canonical="https://www.stellarmetalworks.com/example-work"
-                openGraph={{
-                    title: 'Example Work | Stellar Metal Machining',
-                    description: "Explore examples of custom machining projects by Stellar Metal Machining.",
-                    url: 'https://www.stellarmetalworks.com/example-work/',
-                    type: "website"
-                }}
-                additionalMetaTags={[
-                    {
-                        name: "keywords",
-                        content: "custom machining, metalworking projects, precision machining, metal fabrication, welding, custom metal parts"
-                    },
-                    {
-                        name: "application-name",
-                        content: "Stellar Metal Machining",
-                    },
-                ]}
-                images={[
-                "public/StellarMetalLogoExtended.svg",
-                "public/machineshop/cylinder.jpg",
-                "public/machineshop/cylinder.jpg",
-                "public/machineshop/work-example-1.jpg",
-                "public/machineshop/rod-drill.jpg",
-                "public/machineshop/turningDown.jpg",
-                ]}
-                additionalLinkTags={[
-                    {
-                        rel: 'icon',
-                        href: 'app/favicon.ico',
-                    },
-                ]}
-                jsonLd={jsonLdData}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(JSON.stringify(jsonLdData))}}
             />
-
-            {/*<Head>*/}
-            {/*    <title>Our Projects | Stellar Metal Machining</title>*/}
-            {/*    <meta name="description" content="Explore our portfolio of custom metalworking projects, showcasing precision machining and expert craftsmanship at Stellar Metal Machining."/>*/}
-            {/*    <meta name="keywords" content="custom machining, metalworking projects, precision machining, metal fabrication, welding, custom metal parts"/>*/}
-            {/*    <link rel="canonical" href="https://www.stellarmetalworks.com/example-work"/>*/}
-            {/*</Head>*/}
+            {/*<NextSeo*/}
+            {/*    title="Example Work | Stellar Metal Machining"*/}
+            {/*    description="Explore examples of custom machining projects by Stellar Metal Machining."*/}
+            {/*    canonical="https://www.stellarmetalworks.com/example-work"*/}
+            {/*    openGraph={{*/}
+            {/*        title: 'Example Work | Stellar Metal Machining',*/}
+            {/*        description: "Explore examples of custom machining projects by Stellar Metal Machining.",*/}
+            {/*        url: 'https://www.stellarmetalworks.com/example-work/',*/}
+            {/*        type: "website"*/}
+            {/*    }}*/}
+            {/*    additionalMetaTags={[*/}
+            {/*        {*/}
+            {/*            name: "keywords",*/}
+            {/*            content: "custom machining, metalworking projects, precision machining, metal fabrication, welding, custom metal parts"*/}
+            {/*        },*/}
+            {/*        {*/}
+            {/*            name: "application-name",*/}
+            {/*            content: "Stellar Metal Machining",*/}
+            {/*        },*/}
+            {/*    ]}*/}
+            {/*    images={[*/}
+            {/*    "public/StellarMetalLogoExtended.svg",*/}
+            {/*    "public/machineshop/cylinder.jpg",*/}
+            {/*    "public/machineshop/cylinder.jpg",*/}
+            {/*    "public/machineshop/work-example-1.jpg",*/}
+            {/*    "public/machineshop/rod-drill.jpg",*/}
+            {/*    "public/machineshop/turningDown.jpg",*/}
+            {/*    ]}*/}
+            {/*    additionalLinkTags={[*/}
+            {/*        {*/}
+            {/*            rel: 'icon',*/}
+            {/*            href: 'app/favicon.ico',*/}
+            {/*        },*/}
+            {/*    ]}*/}
+            {/*    jsonLd={jsonLdData}*/}
+            {/*/>*/}
 
             <header className="border-b-8 border-gray-500">
                 <NavigationBar/>
@@ -82,7 +150,8 @@ export default async function ExampleWork() {
                 </figure>
 
                 <div className="flex flex-col text-center items-center p-10 justify-center">
-                    <p className={`${lora.className} font-extrabold text-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pb-32 pt-10`}>&quot;Precision in Every Detail&quot;</p>
+                    <p className={`${lora.className} font-extrabold text-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pb-32 pt-10`}>&quot;Precision
+                        in Every Detail&quot;</p>
                     <h1 className="font-bold bg-blue-950 p-6 w-1/2 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Example
                         Work Gallery</h1>
                 </div>
@@ -90,7 +159,8 @@ export default async function ExampleWork() {
 
             <section className="flex flex-col justify-center text-center p-8 bg-zinc-200 m-4">
                 <div className="flex justify-center text-center pb-10 pt-10">
-                    <h2 className="underline decoration-yellow-200 font-extrabold text-black bg-zinc-200 p-6 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Here are Some of Our Projects:</h2>
+                    <h2 className="underline decoration-yellow-200 font-extrabold text-black bg-zinc-200 p-6 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Here
+                        are Some of Our Projects:</h2>
                 </div>
 
                 <main className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row w-2/3 self-center">
@@ -112,7 +182,9 @@ export default async function ExampleWork() {
                                height={600}
                                alt="This is an example of a handle made on our lathe and drill"
                         />
-                        <figcaption className="p-4 text-black font-extrabold">Here is a Custom Handle we Made. It was Turned Down and on Our Lathe, With any Necessary Holes Drilled With Our Pillar Drill</figcaption>
+                        <figcaption className="p-4 text-black font-extrabold">Here is a Custom Handle we Made. It was
+                            Turned Down and on Our Lathe, With any Necessary Holes Drilled With Our Pillar Drill
+                        </figcaption>
                     </figure>
 
                     <figure className="bg-off-white shadow-gray-600 shadow-xl m-7 rounded-lg">
@@ -130,9 +202,11 @@ export default async function ExampleWork() {
                                src="/machineshop/turningDown.jpg"
                                width={600}
                                height={600}
-                               alt="turning down"
+                               alt="Turning down A piece of metal to be press fit"
                         />
-                        <figcaption className="p-4 text-black font-extrabold">Here is a Rod that Needed to Be a Pressed Fit, Which was Turned Down in Our Lathe</figcaption>
+                        <figcaption className="p-4 text-black font-extrabold">Here is a Rod that Needed to Be a Pressed
+                            Fit, Which was Turned Down in Our Lathe
+                        </figcaption>
                     </figure>
                 </main>
             </section>
