@@ -56,14 +56,14 @@ export default async function AboutUs() {
                     "postalCode": "07828",
                     "addressCountry": "US"
                 }
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Sales",
+                "email": "stellarmetal.sales@gmail.com",
+                "url": "https://www.stellarmetalworks.com/request-quote"
             }
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Sales",
-            "email": "stellarmetal.sales@gmail.com",
-            "url": "https://www.stellarmetalworks.com/request-quote"
-        },
+        }
     };
 
     return (
@@ -72,40 +72,6 @@ export default async function AboutUs() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(JSON.stringify(jsonLdData))}}
             />
-
-            {/*<NextSeo*/}
-            {/*    title="About Us | Stellar Metal Machining"*/}
-            {/*    description="Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer."*/}
-            {/*    canonical="https://www.stellarmetalworks.com/about-us"*/}
-            {/*    openGraph={{*/}
-            {/*        title: 'About Us | Stellar Metal Machining',*/}
-            {/*        description: "Learn more about Stellar Metal Machining, our team, our mission, and the custom machining services we offer.",*/}
-            {/*        url: 'https://www.stellarmetalworks.com/about-us/',*/}
-            {/*        type: "website"*/}
-            {/*    }}*/}
-            {/*    additionalMetaTags={[*/}
-            {/*        {*/}
-            {/*            name: "keywords",*/}
-            {/*            content: "about us, Stellar Metal Machining, custom machining, precision machining, metalwork, company history, team, mission"*/}
-            {/*        },*/}
-            {/*        {*/}
-            {/*            name: "application-name",*/}
-            {/*            content: "Stellar Metal Machining",*/}
-            {/*        },*/}
-            {/*    ]}*/}
-            {/*    images={[*/}
-            {/*    "public/StellarMetalLogoExtended.svg",*/}
-            {/*    "public/machineshop/lathe-wide-angle.jpg",*/}
-            {/*    "public/machineshop/pillar-drill.jpg",*/}
-            {/*    ]}*/}
-            {/*    additionalLinkTags={[*/}
-            {/*        {*/}
-            {/*            rel: 'icon',*/}
-            {/*            href: 'app/favicon.ico',*/}
-            {/*        },*/}
-            {/*    ]}*/}
-            {/*    jsonLd={jsonLdData}*/}
-            {/*/>*/}
 
             <NavigationBar/>
             <figure className="flex justify-center pt-4 pb-4">

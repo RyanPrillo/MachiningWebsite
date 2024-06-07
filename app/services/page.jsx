@@ -23,22 +23,54 @@ export const metadata = {
 export default async function Services() {
     const jsonLdData = {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Stellar Metal Machining Services",
-        "description": "Discover our range of metal machining services, including manual machining, welding, precision machining, fabrication, and prototyping.",
-        "url": "https://www.stellarmetalworks.com/services/",
-        "logo": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg",
-        "serviceType": ["Manual Machining", "Precision Machining", "Fabrication", "Prototyping", "Welding", "Custom Parts"],
-        "areaServed": {
-            "@type": "Place",
-            "name": "United States"
-        },
-        "contactPoint": {
-        "@type": "ContactPoint",
-            "contactType": "Sales",
-            "email": "stellarmetal.sales@gmail.com",
-            "url": "https://www.stellarmetalworks.com/request-quote"
-    },
+        "@type": "CollectionPage",
+        "mainEntity": {
+            "@type": "CreativeWork",
+            "name": "Examples of Our Work",
+            "description": "Explore examples of custom machining projects by Stellar Metal Machining.",
+            "url": "https://www.stellarmetalworks.com/example-work/",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Stellar Metal Machining",
+                "url": "https://www.stellarmetalworks.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Sales",
+                    "email": "stellarmetal.sales@gmail.com",
+                    "url": "https://www.stellarmetalworks.com/request-quote"
+                }
+            },
+            "hasPart": [
+                {
+                    "@type": "ImageObject",
+                    "name": "Cylinder turned down in our lathe",
+                    "contentUrl": "https://www.stellarmetalworks.com/public/machineshop/cylinder.jpg",
+                    "caption": "Cylinder turned down in our lathe"
+                },
+                {
+                    "@type": "ImageObject",
+                    "name": "Custom Handle",
+                    "contentUrl": "https://www.stellarmetalworks.com/public/machineshop/work-example-1.jpg",
+                    "caption": "This is an example of a handle made on our lathe and drill. It was turned down on our lathe, with any necessary holes drilled with our pillar drill."
+                },
+                {
+                    "@type": "ImageObject",
+                    "name": "Rod that was turned down in lathe, then drilled",
+                    "contentUrl": "https://www.stellarmetalworks.com/public/machineshop/rod-drill.jpg",
+                    "caption": "A rod that was turned down in lathe, then drilled."
+                },
+                {
+                    "@type": "ImageObject",
+                    "name": "Rod that needed to be a pressed fit, which was turned down in our lathe",
+                    "contentUrl": "https://www.stellarmetalworks.com/public/machineshop/turningDown.jpg",
+                    "caption": "Here is a rod that needed to be a pressed fit, which was turned down in our lathe."
+                }
+            ]
+        }
     };
 
     return (

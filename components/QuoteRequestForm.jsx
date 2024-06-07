@@ -303,7 +303,7 @@ export default function QuoteRequestForm() {
                                                 render={({field: {onChange, onBlur, value, name, ref}}) => (
                                                     <TextField
                                                         name={name}
-                                                        label="Materials (Metal)"
+                                                        label={!watchRepairWorkCheck ? "Materials (Metal)" : "Specific Repair Materials? (Optional)"}
                                                         placeholder={!watchRepairWorkCheck ? "What materials would you like your product to be made of?" : "Do you have a specific request for the materials we use when repairing your part?"}
                                                         variant="outlined"
                                                         fullWidth

@@ -24,25 +24,27 @@ export default async function AboutUs() {
 
     const jsonLdData = {
         "@context": "https://schema.org",
-        "@type": "RequestQuotePage",
+        "@type": "WebPage",
+        "name": "Request a Quote",
+        "description": "Request a quote for custom metal machining services from Stellar Metal Machining.",
+        "url": "https://www.stellarmetalworks.com/request-quote/",
         "mainEntity": {
             "@type": "Service",
             "name": "Custom Machining Services",
-            "description": "Request a quote for custom machining services from Stellar Metal Machining.",
-            "url": "https://www.stellarmetalworks.com/request-quote/",
-            "logo": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg",
-            "potentialAction": {
-                "@type": "QuoteAction",
-                "target": "https://www.stellarmetalworks.com/request-quote",
-                "query-input": "required name=service"
+            "description": "Request a quote for custom metal machining services from Stellar Metal Machining.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Stellar Metal Machining",
+                "url": "https://www.stellarmetalworks.com/",
+                "logo": "https://www.stellarmetalworks.com/StellarMetalLogoSquare.svg",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Sales",
+                    "email": "stellarmetal.sales@gmail.com",
+                    "url": "https://www.stellarmetalworks.com/request-quote"
+                }
             }
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Sales",
-            "email": "stellarmetal.sales@gmail.com",
-            "url": "https://www.stellarmetalworks.com/request-quote"
-        },
+        }
     }
 
     return (

@@ -82,6 +82,14 @@ export default async function Home() {
             "email": "stellarmetal.sales@gmail.com",
             "url": "https://www.stellarmetalworks.com/request-quote"
         },
+        "sameAs": [
+            "https://www.facebook.com/StellarMetalWorks"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mount Olive",
+            "addressRegion": "NJ"
+        }
     };
 
     const services = {
@@ -122,44 +130,6 @@ export default async function Home() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(JSON.stringify(jsonLdData))}}
             />
-            {/*<NextSeo*/}
-            {/*    title="Stellar Metal Machining"*/}
-            {/*    description="Stellar Metal Machining is a metal machine shop that specializes in precision metalwork, fabrication, and prototyping."*/}
-            {/*    canonical="https://www.stellarmetalworks.com/"*/}
-            {/*    openGraph={{*/}
-            {/*        title: 'Stellar Metal Machining',*/}
-            {/*        description: "Stellar Metal Machining is a metal machine shop that specializes in precision metalwork, fabrication, and prototyping.",*/}
-            {/*        url: 'https://www.stellarmetalworks.com/',*/}
-            {/*        type: "website"*/}
-            {/*    }}*/}
-            {/*    additionalMetaTags={[*/}
-            {/*        {*/}
-            {/*            name: "keywords",*/}
-            {/*            content: "custom machining, manual machining, precision machining, fabrication, metalwork, welding, custom parts, prototyping, machined parts"*/}
-            {/*        },*/}
-            {/*        {*/}
-            {/*            name: "application-name",*/}
-            {/*            content: "Stellar Metal Machining",*/}
-            {/*        },*/}
-            {/*    ]}*/}
-            {/*    images={[*/}
-            {/*    "public/machineshop/lathe-in-motion.jpg",*/}
-            {/*    "public/machineshop/metalNutBefore.jpg",*/}
-            {/*    "public/machineshop/metalNutAfter.jpg",*/}
-            {/*    "public/machineshop/cylinder.jpg",*/}
-            {/*    "public/machineshop/work-example-1.jpg",*/}
-            {/*    "public/machineshop/rod-drill.jpg",*/}
-            {/*    "public/machineshop/turningDown.jpg",*/}
-            {/*    "public/machineshop/lathe.jpg",*/}
-            {/*    ]}*/}
-            {/*    additionalLinkTags={[*/}
-            {/*        {*/}
-            {/*            rel: 'icon',*/}
-            {/*            href: 'app/favicon.ico',*/}
-            {/*        },*/}
-            {/*    ]}*/}
-            {/*    jsonLd={jsonLdData}*/}
-            {/*/>*/}
 
             <header className="z-50 self-start w-full">
                 <NavigationBar/>
