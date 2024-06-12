@@ -1,10 +1,12 @@
 import Image from "next/image";
 import NavigationBar from "@/components/NavigationBar";
-import {lora} from "@/app/fonts";
+import {lora, robotoSlab} from "@/app/fonts";
 import DOMPurify from 'isomorphic-dompurify';
+import ServiceGallery from "@/components/ServiceGallery";
 
 export const metadata = {
     title: "Example Work | Stellar Metal Machining",
+    description: "Discover our range of metal machining services, including manual machining, precision machining, fabrication, and prototyping.",
     openGraph: {
         title: "Example Work | Stellar Metal Machining",
         description: "Explore examples of custom machining projects by Stellar Metal Machining.",
@@ -96,42 +98,6 @@ export default async function ExampleWork() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(JSON.stringify(jsonLdData))}}
             />
-            {/*<NextSeo*/}
-            {/*    title="Example Work | Stellar Metal Machining"*/}
-            {/*    description="Explore examples of custom machining projects by Stellar Metal Machining."*/}
-            {/*    canonical="https://www.stellarmetalworks.com/example-work"*/}
-            {/*    openGraph={{*/}
-            {/*        title: 'Example Work | Stellar Metal Machining',*/}
-            {/*        description: "Explore examples of custom machining projects by Stellar Metal Machining.",*/}
-            {/*        url: 'https://www.stellarmetalworks.com/example-work/',*/}
-            {/*        type: "website"*/}
-            {/*    }}*/}
-            {/*    additionalMetaTags={[*/}
-            {/*        {*/}
-            {/*            name: "keywords",*/}
-            {/*            content: "custom machining, metalworking projects, precision machining, metal fabrication, welding, custom metal parts"*/}
-            {/*        },*/}
-            {/*        {*/}
-            {/*            name: "application-name",*/}
-            {/*            content: "Stellar Metal Machining",*/}
-            {/*        },*/}
-            {/*    ]}*/}
-            {/*    images={[*/}
-            {/*    "public/StellarMetalLogoExtended.svg",*/}
-            {/*    "public/machineshop/cylinder.jpg",*/}
-            {/*    "public/machineshop/cylinder.jpg",*/}
-            {/*    "public/machineshop/work-example-1.jpg",*/}
-            {/*    "public/machineshop/rod-drill.jpg",*/}
-            {/*    "public/machineshop/turningDown.jpg",*/}
-            {/*    ]}*/}
-            {/*    additionalLinkTags={[*/}
-            {/*        {*/}
-            {/*            rel: 'icon',*/}
-            {/*            href: 'app/favicon.ico',*/}
-            {/*        },*/}
-            {/*    ]}*/}
-            {/*    jsonLd={jsonLdData}*/}
-            {/*/>*/}
 
             <header className="border-b-8 border-gray-500">
                 <NavigationBar/>
@@ -149,66 +115,15 @@ export default async function ExampleWork() {
                     />
                 </figure>
 
-                <div className="flex flex-col text-center items-center p-10 justify-center">
-                    <p className={`${lora.className} font-extrabold text-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pb-32 pt-10`}>&quot;Precision
+                <h2 className={`${robotoSlab.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-black font-extrabold text-center underline p-6 pb-10 h-1/3 decoration-blue-400`}>
+                    <p className={`${lora.className} font-extrabold text-blue-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl pb-32 pt-10`}>&quot;Precision
                         in Every Detail&quot;</p>
-                    <h1 className="font-bold bg-blue-950 p-6 w-1/2 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Example
-                        Work Gallery</h1>
-                </div>
+                    Here are Some Projects We Have Worked On:
+                </h2>
             </header>
 
             <section className="flex flex-col justify-center text-center p-8 bg-zinc-200 m-4">
-                <div className="flex justify-center text-center pb-10 pt-10">
-                    <h2 className="underline decoration-yellow-200 font-extrabold text-black bg-zinc-200 p-6 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Here
-                        are Some of Our Projects:</h2>
-                </div>
-
-                <main className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row w-2/3 self-center">
-
-                    <figure className="bg-off-white shadow-gray-600 shadow-xl m-7 rounded-lg">
-                        <Image className="p-7 justify-center"
-                               src="/machineshop/cylinder.jpg"
-                               width={600}
-                               height={600}
-                               alt="Cylinder turned down in our lathe"
-                        />
-                        <figcaption className="p-4 text-black font-extrabold"></figcaption>
-                    </figure>
-
-                    <figure className="bg-off-white shadow-gray-600 shadow-xl m-7 rounded-lg">
-                        <Image className="p-7 justify-center"
-                               src="/machineshop/work-example-1.jpg"
-                               width={600}
-                               height={600}
-                               alt="This is an example of a handle made on our lathe and drill"
-                        />
-                        <figcaption className="p-4 text-black font-extrabold">Here is a Custom Handle we Made. It was
-                            Turned Down and on Our Lathe, With any Necessary Holes Drilled With Our Pillar Drill
-                        </figcaption>
-                    </figure>
-
-                    <figure className="bg-off-white shadow-gray-600 shadow-xl m-7 rounded-lg">
-                        <Image className="p-7 justify-center"
-                               src="/machineshop/rod-drill.jpg"
-                               width={600}
-                               height={600}
-                               alt="A rod that was turned down in lathe, then drilled"
-                        />
-                        <figcaption className="p-4 text-black font-extrabold"></figcaption>
-                    </figure>
-
-                    <figure className="relative bg-off-white shadow-gray-600 shadow-xl m-7 rounded-lg">
-                        <Image className="p-7 justify-center"
-                               src="/machineshop/turningDown.jpg"
-                               width={600}
-                               height={600}
-                               alt="Turning down A piece of metal to be press fit"
-                        />
-                        <figcaption className="p-4 text-black font-extrabold">Here is a Rod that Needed to Be a Pressed
-                            Fit, Which was Turned Down in Our Lathe
-                        </figcaption>
-                    </figure>
-                </main>
+                <ServiceGallery/>
             </section>
         </article>
     )

@@ -17,12 +17,12 @@ export default function Accordion({displayItems, iconsList}) {
 
             {openSections.map((isOpen, index) => (
                 <div key={index} className="flex flex-col justify-between items-center w-full">
-                    <button onClick={() => updateAccordion(index)} className="accordion-button" aria-label="Expand repair work list">
+                    <button onClick={() => updateAccordion(index)} className="accordion-button justify-center" aria-label="Expand repair work list">
                         <span className="accordion-plus-icon">{isOpen ? "-" : "+"}</span>
                         <span className="accordion-header-text">{Object.keys(displayItems)[index]}</span>
                         <span>{iconsList[index]}</span>
                     </button>
-                    <article className={`rounded overflow-hidden w-full ${isOpen ? "" : "hidden"} `}>
+                    <article className={`rounded overflow-hidden w-full text-center text-lg md:text-xl lg:text-xl xl:text-2xl ${isOpen ? "" : "hidden"} `}>
                         {displayItems[Object.keys(displayItems)[index]]}
                     </article>
                 </div>
