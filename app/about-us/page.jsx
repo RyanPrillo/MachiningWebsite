@@ -100,7 +100,7 @@ export default async function AboutUs() {
                 </header>
 
                 <h1 className="font-bold text-black p-10 w-4/5 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center">
-                    Stellar Metal Machining is a small, family-run machine shop nestled in Northern New Jersey. I'm
+                    Stellar Metal Machining is a small, family-run machine shop nestled in Northern New Jersey. I&rsquo;m
                     Thomas P., and I bring nearly a decade of mechanical experience to the world of precision machining.
                 </h1>
 
@@ -120,7 +120,7 @@ export default async function AboutUs() {
                     <h2 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">From
                         Mechanic to Machinist</h2>
                     My journey began as a diesel mechanic, where I developed a keen attention to detail and a commitment
-                    to doing every job right. My passion for perfection didn't stop with mechanics. Over the years, I
+                    to doing every job right. My passion for perfection didn&rsquo;t stop with mechanics. Over the years, I
                     fell in love with the precise nature of machining, spending countless hours in my workshop, honing
                     my craft.
                 </section>
@@ -138,9 +138,9 @@ export default async function AboutUs() {
                         />
                         <p className="basis-2/3 content-center">
                             I believe every job should be finished to the best of my ability, with absolutely no shortcuts.
-                            Here, we specialize one-off projects, and custom-made pieces that many larger machine shops won't
+                            Here, we specialize one-off projects, and custom-made pieces that many larger machine shops won&rsquo;t
                             take on due to a small volume. Whether it is a unique part for your car project, a repair or
-                            replacement for a specific part, or a custom-made part for your startup company's prototype, we
+                            replacement for a specific part, or a custom-made part for your startup company&rsquo;s prototype, we
                             exhibit great care and precision for every project we take on.
                         </p>
                     </article>
@@ -165,7 +165,7 @@ export default async function AboutUs() {
                     className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
                     <h5 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Get
                         In Touch!</h5>
-                    <p className="mb-4">We'd love to hear from you! Whether you have a specific project in mind or just
+                    <p className="mb-4">We&rsquo;d love to hear from you! Whether you have a specific project in mind or just
                         want to learn more about our services, feel free to reach out to us. Our team is always ready to
                         assist you with your machining needs.</p>
                     <div className="flex flex-row justify-center items-center space-x-4">
