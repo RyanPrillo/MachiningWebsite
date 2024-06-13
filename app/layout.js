@@ -1,6 +1,6 @@
 import {manrope} from "@/app/fonts";
 import "./globals.css";
-import GoogleAnalytics from '@/components/GoogleAnalytics';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   metadataBase: new URL(`https://www.stellarmetalworks.com`),
