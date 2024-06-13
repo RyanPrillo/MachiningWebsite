@@ -22,7 +22,7 @@ export default function Accordion({displayItems, iconsList}) {
                         <span className="accordion-header-text">{Object.keys(displayItems)[index]}</span>
                         <span>{iconsList[index]}</span>
                     </button>
-                    <article className={`rounded overflow-hidden w-full text-center text-lg md:text-xl lg:text-xl xl:text-2xl ${isOpen ? "" : "hidden"} `}>
+                    <article className={`rounded overflow-hidden w-full text-center text-lg md:text-xl lg:text-xl xl:text-2xl pb-7 ${isOpen ? "" : "hidden"}`}>
                         {displayItems[Object.keys(displayItems)[index]]}
                     </article>
                 </div>

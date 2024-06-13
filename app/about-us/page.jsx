@@ -100,7 +100,8 @@ export default async function AboutUs() {
                 </header>
 
                 <h1 className="font-bold text-black p-10 w-4/5 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center">
-                    Stellar Metal Machining is a small, family-run machine shop nestled in Northern New Jersey. I&rsquo;m
+                    Stellar Metal Machining is a small, family-run machine shop nestled in Northern New Jersey.
+                    I&rsquo;m
                     Thomas P., and I bring nearly a decade of mechanical experience to the world of precision machining.
                 </h1>
 
@@ -120,14 +121,16 @@ export default async function AboutUs() {
                     <h2 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">From
                         Mechanic to Machinist</h2>
                     My journey began as a diesel mechanic, where I developed a keen attention to detail and a commitment
-                    to doing every job right. My passion for perfection didn&rsquo;t stop with mechanics. Over the years, I
+                    to doing every job right. My passion for perfection didn&rsquo;t stop with mechanics. Over the
+                    years, I
                     fell in love with the precise nature of machining, spending countless hours in my workshop, honing
                     my craft.
                 </section>
 
                 <section
                     className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
-                    <h3 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">What We Do</h3>
+                    <h3 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">What
+                        We Do</h3>
                     <article className="flex">
                         <Image className="m-8 border-4 justify-center rounded-2xl overflow-hidden basis-1/4"
                                src="/machineshop/metalNutAfter.jpg"
@@ -137,10 +140,13 @@ export default async function AboutUs() {
                                alt="Tom P, Machine Shop Owner"
                         />
                         <p className="basis-2/3 content-center">
-                            I believe every job should be finished to the best of my ability, with absolutely no shortcuts.
-                            Here, we specialize one-off projects, and custom-made pieces that many larger machine shops won&rsquo;t
+                            I believe every job should be finished to the best of my ability, with absolutely no
+                            shortcuts.
+                            Here, we specialize one-off projects, and custom-made pieces that many larger machine shops
+                            won&rsquo;t
                             take on due to a small volume. Whether it is a unique part for your car project, a repair or
-                            replacement for a specific part, or a custom-made part for your startup company&rsquo;s prototype, we
+                            replacement for a specific part, or a custom-made part for your startup company&rsquo;s
+                            prototype, we
                             exhibit great care and precision for every project we take on.
                         </p>
                     </article>
@@ -161,15 +167,52 @@ export default async function AboutUs() {
                     </blockquote>
                 </section>
 
+                <section className="border-t-4 border-t-gray-400">
+                    <header className="flex text-center justify-center p-10">
+                        <h5 className="font-bold text-black bg-zinc-200 p-6 w-full text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline">Our
+                            Machines</h5>
+                    </header>
+                    <section className="flex justify-center p-10">
+                        <figure>
+                            <figcaption
+                                className="flex text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline decoration-blue-400 text-black justify-center">1946
+                                American Pacemaker
+                            </figcaption>
+                            <Image className="m-4 overflow-hidden rounded"
+                                   src="/machineshop/lathe-wide-angle.jpg"
+                                   alt="Our 1946 American Pacemaker Lathe"
+                                   width={400}
+                                   height={400}
+                            />
+                        </figure>
+                        <figure>
+                            <figcaption
+                                className="flex text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline decoration-blue-400 text-black justify-center">1979
+                                Bridgeport Series 1
+                            </figcaption>
+                            <Image className="m-4 overflow-hidden rounded"
+                                   src="/machineshop/pillar-drill.jpg"
+                                   alt="Our 1979 Bridgeport Series 1 Drill"
+                                   width={400}
+                                   height={400}
+                            />
+                        </figure>
+                    </section>
+                </section>
+
                 <section
                     className="flex flex-col items-center text-black p-8 w-4/5 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
-                    <h5 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Get
-                        In Touch!</h5>
-                    <p className="mb-4">We&rsquo;d love to hear from you! Whether you have a specific project in mind or just
+                    <h6 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center m-10 p-6 tracking-wider w-2/3">Get
+                        In Touch!</h6>
+                    <p className="mb-4">We&rsquo;d love to hear from you! Whether you have a specific project in mind or
+                        just
                         want to learn more about our services, feel free to reach out to us. Our team is always ready to
                         assist you with your machining needs.</p>
                     <div className="flex flex-row justify-center items-center space-x-4">
-                        <a href="mailto:stellarmetal.sales@gmail.com" className="flex items-center text-blue-500 hover:text-blue-800 underline"><FontAwesomeIcon icon={faEnvelope} className="mr-2" style={{color: "#6b7be8"}}/> Email: stellarmetal.sales@gmail.com</a>
+                        <a href="mailto:stellarmetal.sales@gmail.com"
+                           className="flex items-center text-blue-500 hover:text-blue-800 underline"><FontAwesomeIcon
+                            icon={faEnvelope} className="mr-2" style={{color: "#6b7be8"}}/> Email:
+                            stellarmetal.sales@gmail.com</a>
                     </div>
                     <RequestQuoteButton/>
                 </section>
