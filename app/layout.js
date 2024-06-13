@@ -1,6 +1,6 @@
 import {manrope} from "@/app/fonts";
 import "./globals.css";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 export const metadata = {
   metadataBase: new URL(`https://www.stellarmetalworks.com`),
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <body className={manrope.className}>
     <link rel="icon" href="/favicon-32x32.png" sizes="any"/>
     {children}
-    <GoogleAnalytics gaId="G-EBM68P9FBM"/>
+    <GoogleAnalytics />
     </body>
     </html>
   );
