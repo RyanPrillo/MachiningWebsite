@@ -15,6 +15,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  console.log("Measurement ID:", process.env.NEXT_PUBLIC_MEASUREMENT_ID);
   return (
     <html lang="en">
     <Script
@@ -24,9 +26,7 @@ export default function RootLayout({ children }) {
     <Script
         id="google-analytics"
         strategy="afterInteractive"
-    onLoad={() => {
-      console.log(process.env.NEXT_PUBLIC_MEASUREMENT_ID)
-    }}>
+    >
       {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
