@@ -24,14 +24,15 @@ export default function RootLayout({ children }) {
     <Script
         id="google-analytics"
         strategy="afterInteractive"
-    >
+    onLoad={() => {
+      console.log(process.env.NEXT_PUBLIC_MEASUREMENT_ID)
+    }}>
       {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}');
         `}
-      console.log("GA ID:", process.env.NEXT_PUBLIC_MEASUREMENT_ID)
     </Script>
     {/*Use manrope font across the site*/}
     <body className={manrope.className}>
