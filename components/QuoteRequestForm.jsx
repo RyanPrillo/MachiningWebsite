@@ -19,6 +19,7 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import FormSubmitPopup from "@/components/FormSubmitPopup";
+import TextFieldCharacterCounter from "@/components/TextFieldCharacterCounter";
 
 export default function QuoteRequestForm() {
     const {
@@ -51,6 +52,13 @@ export default function QuoteRequestForm() {
 
     // used to open to dialog when the form is submitted
     const [openDialog, setOpenDialog] = useState(false)
+
+    const [textLen, setTextLen] = useState("a");
+
+    const handleChange = (event) => {
+        setTextLen(textLen);
+    };
+
 
 
     // make the mui breakpoints match tailwind css for consistency
@@ -105,38 +113,48 @@ export default function QuoteRequestForm() {
                         {/*another grid container to organize the request-quote section*/}
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={4}>
-                                <Controller name="firstName" control={control}
-                                            render={({field: {onChange, onBlur, value, name, ref}}) => (
-                                                <TextField
+                                <Controller name="firstName" control={control} render={({field: {onChange, onBlur, value, name, ref}}) => (
+                                                <TextFieldCharacterCounter
                                                     label="First Name"
                                                     variant="outlined"
+                                                    matchingTailwindBreakpoints={matchingTailwindBreakpoints}
+                                                    type="text"
                                                     fullWidth
                                                     value={value}
+                                                    counter={textLen}
                                                     onBlur={onBlur}
                                                     onChange={onChange}
                                                     inputRef={ref}
                                                     error={Boolean(errors.firstName)}
                                                     helperText={errors.firstName ? errors.firstName.message : " "}
+                                                    InputProps={{
+                                                        maxLength: 20,
+                                                        minLength: 1
+                                                    }}
                                                 />
                                             )}
                                 />
                             </Grid>
 
                             <Grid item xs={12} sm={4}>
-                                <Controller className="" name="email" control={control}
-                                            render={({field: {onChange, onBlur, value, name, ref}}) => (
-                                                <TextField
+                                <Controller className="" name="email" control={control} render={({field: {onChange, onBlur, value, name, ref}}) => (
+                                                <TextFieldCharacterCounter
                                                     label="Email"
                                                     placeholder="We will use this email to contact you"
                                                     variant="outlined"
                                                     fullWidth
-                                                    value={value}
+                                                    matchingTailwindBreakpoints={matchingTailwindBreakpoints}
                                                     onBlur={onBlur}
                                                     onChange={onChange}
                                                     inputRef={ref}
+                                                    type="text"
+                                                    value={value}
+                                                    counter={textLen}
                                                     error={!!errors.email}
                                                     helperText={errors.email ? errors.email.message : " "}
                                                     InputProps={{
+                                                        maxLength: 50,
+                                                        minLength: 7,
                                                         startAdornment: (
                                                             <InputAdornment position="start">
                                                                 <Email/>
@@ -144,6 +162,7 @@ export default function QuoteRequestForm() {
                                                         ),
                                                     }}
                                                 />
+
                                             )}
                                 />
                             </Grid>
@@ -267,11 +286,12 @@ export default function QuoteRequestForm() {
                             <Grid item xs={12} sm={4}>
                                 <Controller name="workDescription" control={control}
                                             render={({field: {onChange, onBlur, value, name, ref}}) => (
-                                                <TextField
+                                                <TextFieldCharacterCounter
                                                     name={name}
                                                     label="What Work Would You Like Done?"
                                                     placeholder="What can we do for you?"
                                                     variant="outlined"
+                                                    matchingTailwindBreakpoints={matchingTailwindBreakpoints}
                                                     fullWidth
                                                     value={value}
                                                     multiline
@@ -279,9 +299,13 @@ export default function QuoteRequestForm() {
                                                     onBlur={onBlur}
                                                     onChange={onChange}
                                                     inputRef={ref}
+                                                    counter={textLen}
+                                                    type="text"
                                                     error={Boolean(errors.workDescription)}
                                                     helperText={errors.workDescription ? errors.workDescription.message : " "}
                                                     InputProps={{
+                                                        maxLength: 300,
+                                                        minLength: 100,
                                                         endAdornment: (
                                                             <Tooltip
                                                                 title="Please describe in detail the product you would like us to make for you"
@@ -301,13 +325,16 @@ export default function QuoteRequestForm() {
                                 {(
                                     <Controller name="typeOfWork.materials" control={control}
                                                 render={({field: {onChange, onBlur, value, name, ref}}) => (
-                                                    <TextField
+                                                    <TextFieldCharacterCounter
                                                         name={name}
+                                                        matchingTailwindBreakpoints={matchingTailwindBreakpoints}
                                                         label={!watchRepairWorkCheck ? "Materials (Metal)" : "Specific Repair Materials? (Optional)"}
                                                         placeholder={!watchRepairWorkCheck ? "What materials would you like your product to be made of?" : "Do you have a specific request for the materials we use when repairing your part?"}
                                                         variant="outlined"
                                                         fullWidth
                                                         InputProps={{
+                                                            maxLength: 100,
+                                                            minLength: 3,
                                                             endAdornment: (
                                                                 <Tooltip
                                                                     title="Specify the materials you want us to use for your product"
@@ -323,10 +350,11 @@ export default function QuoteRequestForm() {
                                                         rows={4}
                                                         onBlur={onBlur}
                                                         onChange={onChange}
+                                                        counter={textLen}
+                                                        type="text"
                                                         inputRef={ref}
                                                         error={Boolean(errors.typeOfWork && errors.typeOfWork.materials)}
                                                         helperText={errors.typeOfWork && errors.typeOfWork.materials ? errors.typeOfWork.materials.message : " "}
-
                                                     />
                                                 )}
                                     />
@@ -336,20 +364,27 @@ export default function QuoteRequestForm() {
                             <Grid item xs={12} sm={4}>
                                 <Controller name="extraInfo" control={control}
                                             render={({field: {onChange, onBlur, value, name, ref}}) => (
-                                                <TextField
+                                                <TextFieldCharacterCounter
                                                     name={name}
                                                     label="Additional Info"
                                                     placeholder="Is there any additional information would you like us to know?"
                                                     variant="outlined"
+                                                    matchingTailwindBreakpoints={matchingTailwindBreakpoints}
                                                     fullWidth
                                                     value={value}
                                                     multiline={true}
                                                     rows={4}
                                                     onBlur={onBlur}
                                                     onChange={onChange}
+                                                    counter={textLen}
+                                                    type="text"
                                                     inputRef={ref}
                                                     error={Boolean(errors.extraInfo)}
                                                     helperText={errors.extraInfo ? errors.extraInfo.message : " "}
+                                                    InputProps={{
+                                                        minLength: 0,
+                                                        maxLength: 100,
+                                                    }}
                                                 />
                                             )}
                                 />

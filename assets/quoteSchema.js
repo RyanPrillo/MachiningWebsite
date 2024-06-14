@@ -32,6 +32,12 @@ export const quoteSchema = z.object({
                 code: z.ZodIssueCode.custom,
                 message: "Materials must be longer than 3 characters long."
             });
+        } if (data.materials.trim().length > 100) {
+            context.addIssue({
+                path: ["materials"],
+                code: z.ZodIssueCode.custom,
+                message: "Materials must be less than 100 characters long."
+            });
         }
     }, {
         message: "Material is required when repair work is checked."

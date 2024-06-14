@@ -49,7 +49,7 @@ export default async function AboutUs() {
     }
 
     return (
-        <article className="bg-white">
+        <article className="bg-white h-auto">
 
             <script
                 type="application/ld+json"
@@ -77,12 +77,12 @@ export default async function AboutUs() {
             </div>
 
             <section
-                className="xs:h-[120rem] sm:h-[85em] flex flex-col items-center bg-zinc-200 w-full pt-10 border-t-gray-400 border-4">
+                className="h-auto flex flex-col items-center bg-zinc-200 w-full pt-10 border-t-gray-400 border-4">
                 <h2 className={`${robotoSlab.className} text-black decoration-blue-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl underline text-center font-extrabold`}>Complete
                     This Form to Receive a Quote</h2>
                 <p className="text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center p-10 pb-32">We
                     will get back to you within the next few days!</p>
-                <article className="flex justify-around m-16">
+                <article className="flex justify-around m-16 h-auto">
                     <QuoteRequestForm/>
                 </article>
             </section>
