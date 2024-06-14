@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
           gtag('js', new Date());
           gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}');
         `}
+      console.log("GA ID:", process.env.NEXT_PUBLIC_MEASUREMENT_ID)
     </Script>
     {/*Use manrope font across the site*/}
     <body className={manrope.className}>
