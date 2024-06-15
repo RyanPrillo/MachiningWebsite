@@ -1,8 +1,6 @@
 import {manrope} from "@/app/fonts";
 import "./globals.css";
-import Script from "next/script";
-import Head from "next/head"
-import {GoogleAnalytics} from "nextjs-google-analytics";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   metadataBase: new URL(`https://www.stellarmetalworks.com`),
@@ -18,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    {/*<GoogleAnalytics trackPageViews/>*/}
+    <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`} />
     {/*Use manrope font across the site*/}
     <body className={manrope.className}>
     <link rel="icon" href="/favicon-32x32.png" sizes="any"/>
