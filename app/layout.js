@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`} />
+    <GoogleAnalytics gaId="G-EBM68P9FBM"/>
     {/*Use manrope font across the site*/}
     <body className={manrope.className}>
     <link rel="icon" href="/favicon-32x32.png" sizes="any"/>
