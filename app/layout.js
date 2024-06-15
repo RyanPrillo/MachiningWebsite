@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <GoogleAnalytics trackPageViews/>
+    {/*<GoogleAnalytics trackPageViews/>*/}
     {/*Use manrope font across the site*/}
     <body className={manrope.className}>
     <link rel="icon" href="/favicon-32x32.png" sizes="any"/>
