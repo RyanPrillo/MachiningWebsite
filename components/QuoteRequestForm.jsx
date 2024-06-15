@@ -106,9 +106,10 @@ export default function QuoteRequestForm() {
                 <Grid className="w-full justify-center text-center" container item>
 
                     {/*section for request-quote info*/}
-                    <section className="w-full justify-center">
-                        <h1 className="text-black pb-20 underline text-xl md:text-2xl lg:text-3xl xl:text-4xl">Enter
+                    <section className="w-full justify-center flex flex-col text-black pb-20 underline text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+                        <h1>Enter
                             Your Contact Information</h1>
+                        <p className="md:text-lg lg:text-xl xl:text-2xl pb-10">*All data sent is encrypted and safe</p>
 
                         {/*another grid container to organize the request-quote section*/}
                         <Grid container spacing={3}>
@@ -305,10 +306,10 @@ export default function QuoteRequestForm() {
                                                     helperText={errors.workDescription ? errors.workDescription.message : " "}
                                                     InputProps={{
                                                         maxLength: 300,
-                                                        minLength: 100,
+                                                        minLength: 20,
                                                         endAdornment: (
                                                             <Tooltip
-                                                                title="Please describe in detail the product you would like us to make for you"
+                                                                title="Please describe the product you would like us to make for you"
                                                                 placement="top-end">
                                                                 <IconButton>
                                                                     <Info/>
@@ -321,74 +322,74 @@ export default function QuoteRequestForm() {
                                 />
                             </Grid>
 
-                            <Grid item xs={12} sm={4}>
-                                {(
-                                    <Controller name="typeOfWork.materials" control={control}
-                                                render={({field: {onChange, onBlur, value, name, ref}}) => (
-                                                    <TextFieldCharacterCounter
-                                                        name={name}
-                                                        matchingTailwindBreakpoints={matchingTailwindBreakpoints}
-                                                        label={!watchRepairWorkCheck ? "Materials (Metal)" : "Specific Repair Materials? (Optional)"}
-                                                        placeholder={!watchRepairWorkCheck ? "What materials would you like your product to be made of?" : "Do you have a specific request for the materials we use when repairing your part?"}
-                                                        variant="outlined"
-                                                        fullWidth
-                                                        InputProps={{
-                                                            maxLength: 100,
-                                                            minLength: 3,
-                                                            endAdornment: (
-                                                                <Tooltip
-                                                                    title="Specify the materials you want us to use for your product"
-                                                                    placement="top-end">
-                                                                    <IconButton>
-                                                                        <Info/>
-                                                                    </IconButton>
-                                                                </Tooltip>
-                                                            ),
-                                                        }}
-                                                        value={value}
-                                                        multiline={true}
-                                                        rows={4}
-                                                        onBlur={onBlur}
-                                                        onChange={onChange}
-                                                        counter={textLen}
-                                                        type="text"
-                                                        inputRef={ref}
-                                                        error={Boolean(errors.typeOfWork && errors.typeOfWork.materials)}
-                                                        helperText={errors.typeOfWork && errors.typeOfWork.materials ? errors.typeOfWork.materials.message : " "}
-                                                    />
-                                                )}
-                                    />
-                                )}
-                            </Grid>
+                            {/*<Grid item xs={12} sm={4}>*/}
+                            {/*    {(*/}
+                            {/*        <Controller name="typeOfWork.materials" control={control}*/}
+                            {/*                    render={({field: {onChange, onBlur, value, name, ref}}) => (*/}
+                            {/*                        <TextFieldCharacterCounter*/}
+                            {/*                            name={name}*/}
+                            {/*                            matchingTailwindBreakpoints={matchingTailwindBreakpoints}*/}
+                            {/*                            label={!watchRepairWorkCheck ? "Materials (Metal)" : "Specific Repair Materials? (Optional)"}*/}
+                            {/*                            placeholder={!watchRepairWorkCheck ? "What materials would you like your product to be made of?" : "Do you have a specific request for the materials we use when repairing your part?"}*/}
+                            {/*                            variant="outlined"*/}
+                            {/*                            fullWidth*/}
+                            {/*                            InputProps={{*/}
+                            {/*                                maxLength: 100,*/}
+                            {/*                                minLength: 3,*/}
+                            {/*                                endAdornment: (*/}
+                            {/*                                    <Tooltip*/}
+                            {/*                                        title="Specify the materials you want us to use for your product"*/}
+                            {/*                                        placement="top-end">*/}
+                            {/*                                        <IconButton>*/}
+                            {/*                                            <Info/>*/}
+                            {/*                                        </IconButton>*/}
+                            {/*                                    </Tooltip>*/}
+                            {/*                                ),*/}
+                            {/*                            }}*/}
+                            {/*                            value={value}*/}
+                            {/*                            multiline={true}*/}
+                            {/*                            rows={4}*/}
+                            {/*                            onBlur={onBlur}*/}
+                            {/*                            onChange={onChange}*/}
+                            {/*                            counter={textLen}*/}
+                            {/*                            type="text"*/}
+                            {/*                            inputRef={ref}*/}
+                            {/*                            error={Boolean(errors.typeOfWork && errors.typeOfWork.materials)}*/}
+                            {/*                            helperText={errors.typeOfWork && errors.typeOfWork.materials ? errors.typeOfWork.materials.message : " "}*/}
+                            {/*                        />*/}
+                            {/*                    )}*/}
+                            {/*        />*/}
+                            {/*    )}*/}
+                            {/*</Grid>*/}
 
-                            <Grid item xs={12} sm={4}>
-                                <Controller name="extraInfo" control={control}
-                                            render={({field: {onChange, onBlur, value, name, ref}}) => (
-                                                <TextFieldCharacterCounter
-                                                    name={name}
-                                                    label="Additional Info"
-                                                    placeholder="Is there any additional information would you like us to know?"
-                                                    variant="outlined"
-                                                    matchingTailwindBreakpoints={matchingTailwindBreakpoints}
-                                                    fullWidth
-                                                    value={value}
-                                                    multiline={true}
-                                                    rows={4}
-                                                    onBlur={onBlur}
-                                                    onChange={onChange}
-                                                    counter={textLen}
-                                                    type="text"
-                                                    inputRef={ref}
-                                                    error={Boolean(errors.extraInfo)}
-                                                    helperText={errors.extraInfo ? errors.extraInfo.message : " "}
-                                                    InputProps={{
-                                                        minLength: 0,
-                                                        maxLength: 100,
-                                                    }}
-                                                />
-                                            )}
-                                />
-                            </Grid>
+                            {/*<Grid item xs={12} sm={4}>*/}
+                            {/*    <Controller name="extraInfo" control={control}*/}
+                            {/*                render={({field: {onChange, onBlur, value, name, ref}}) => (*/}
+                            {/*                    <TextFieldCharacterCounter*/}
+                            {/*                        name={name}*/}
+                            {/*                        label="Additional Info"*/}
+                            {/*                        placeholder="Is there any additional information would you like us to know?"*/}
+                            {/*                        variant="outlined"*/}
+                            {/*                        matchingTailwindBreakpoints={matchingTailwindBreakpoints}*/}
+                            {/*                        fullWidth*/}
+                            {/*                        value={value}*/}
+                            {/*                        multiline={true}*/}
+                            {/*                        rows={4}*/}
+                            {/*                        onBlur={onBlur}*/}
+                            {/*                        onChange={onChange}*/}
+                            {/*                        counter={textLen}*/}
+                            {/*                        type="text"*/}
+                            {/*                        inputRef={ref}*/}
+                            {/*                        error={Boolean(errors.extraInfo)}*/}
+                            {/*                        helperText={errors.extraInfo ? errors.extraInfo.message : " "}*/}
+                            {/*                        InputProps={{*/}
+                            {/*                            minLength: 0,*/}
+                            {/*                            maxLength: 100,*/}
+                            {/*                        }}*/}
+                            {/*                    />*/}
+                            {/*                )}*/}
+                            {/*    />*/}
+                            {/*</Grid>*/}
                         </Grid>
                     </section>
 

@@ -13,34 +13,34 @@ export const quoteSchema = z.object({
             message: "Please enter a valid phone number",
         }),
     workDescription: z.coerce.string({message: "Must enter a work description"})
-        .min(100, "Description must be more than 100 characters")
+        .min(20, "Description must be more than 20 characters")
         .max(300, "Description must be less than 300 characters"),
 
     typeOfWork: z.object({
         repairWorkCheck: z.boolean().optional(),
-        materials: z.string({message: "Must enter the materials you would like your product made of"})
+        // materials: z.string({message: "Must enter the materials you would like your product made of"})
     }).superRefine((data, context) => {
-        if (!data.repairWorkCheck && !data.materials) {
-            context.addIssue({
-                path: ["materials"],
-                code: z.ZodIssueCode.custom,
-                message: "Material is required when repair work is checked."
-            });
-        } if (!data.repairWorkCheck && data.materials.trim().length < 3) {
-            context.addIssue({
-                path: ["materials"],
-                code: z.ZodIssueCode.custom,
-                message: "Materials must be longer than 3 characters long."
-            });
-        } if (data.materials.trim().length > 100) {
-            context.addIssue({
-                path: ["materials"],
-                code: z.ZodIssueCode.custom,
-                message: "Materials must be less than 100 characters long."
-            });
-        }
+        // if (!data.repairWorkCheck && !data.materials) {
+        //     context.addIssue({
+        //         path: ["materials"],
+        //         code: z.ZodIssueCode.custom,
+        //         message: "Material is required when repair work is checked."
+        //     });
+        // } if (!data.repairWorkCheck && data.materials.trim().length < 3) {
+        //     context.addIssue({
+        //         path: ["materials"],
+        //         code: z.ZodIssueCode.custom,
+        //         message: "Materials must be longer than 3 characters long."
+        //     });
+        // } if (data.materials.trim().length > 100) {
+        //     context.addIssue({
+        //         path: ["materials"],
+        //         code: z.ZodIssueCode.custom,
+        //         message: "Materials must be less than 100 characters long."
+        //     });
+        // }
     }, {
-        message: "Material is required when repair work is checked."
+        // message: "Material is required when repair work is checked."
     }),
 
     deadlineDetails: z.object({
@@ -65,5 +65,5 @@ export const quoteSchema = z.object({
         message: "A valid deadline date is required when deadline is checked."
     }),
 
-    extraInfo: z.string().max(100, "Additional info must be less than 100 characters").optional(),
+    // extraInfo: z.string().max(100, "Additional info must be less than 100 characters").optional(),
 });
