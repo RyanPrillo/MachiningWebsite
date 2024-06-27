@@ -12,31 +12,31 @@ export const metadata = {
         description: "Explore examples of custom machining projects by Stellar Metal Machining.",
         images: [
             {
-                url: 'https://www.stellarmetalworks.com/public/StellarMetalLogoSquare.svg',
+                url: 'https://cdn.stellarmetalworks.com/StellarMetalLogoSquare.svg',
                 width: 400,
                 height: 400,
                 alt: 'Stellar Metal Machining Logo'
             },
             {
-                url:  "https://www.stellarmetalworks.com/public/machineshop/cylinder.jpg",
+                url:  "https://cdn.stellarmetalworks.com/machineshop/cylinder.jpg",
                 width: 400,
                 height: 400,
                 alt: "Cylinder turned down in our lathe"
             },
             {
-                url:  "https://www.stellarmetalworks.com/public/machineshop/work-example-1.jpg",
+                url:  "https://cdn.stellarmetalworks.com/machineshop/work-example-1.jpg",
                 width: 400,
                 height: 400,
                 alt: "This is an example of a handle made on our lathe and drill"
             },
             {
-                url:  "https://www.stellarmetalworks.com/public/machineshop/rod-drill.jpg",
+                url:  "https://cdn.stellarmetalworks.com/machineshop/rod-drill.jpg",
                 width: 400,
                 height: 400,
                 alt: "A rod that was turned down in lathe, then drilled"
             },
             {
-                url:  "https://www.stellarmetalworks.com/public/machineshop/turningDown.jpg",
+                url:  "https://cdn.stellarmetalworks.com/machineshop/turningDown.jpg",
                 width: 400,
                 height: 400,
                 alt: "Turning down A piece of metal to be press fit"

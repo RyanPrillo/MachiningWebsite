@@ -15,19 +15,19 @@ export const metadata = {
         description: "Learn more about Stellar Metal Machining, who we are, our mission, and the custom machining services we offer.",
         images: [
             {
-                url: 'https://www.stellarmetalworks.com/public/StellarMetalLogoSquare.svg',
+                url: 'https://cdn.stellarmetalworks.com/StellarMetalLogoSquare.svg',
                 width: 400,
                 height: 400,
                 alt: 'Stellar Metal Machining Logo'
             },
             {
-                url: "https://www.stellarmetalworks.com/public/machineshop/lathe-wide-angle.jpg",
+                url: "https://cdn.stellarmetalworks.com/machineshop/lathe-wide-angle.jpg",
                 width: 400,
                 height: 400,
                 alt: 'Our 1946 American Pacemaker Lathe'
             },
             {
-                url: "https://www.stellarmetalworks.com/public/machineshop/pillar-drill.jpg",
+                url: "https://cdn.stellarmetalworks.com/machineshop/pillar-drill.jpg",
                 width: 400,
                 height: 400,
                 alt: "Our 1979 Bridgeport Series 1 Drill"

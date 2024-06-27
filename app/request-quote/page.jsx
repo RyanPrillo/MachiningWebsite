@@ -12,7 +12,7 @@ export const metadata = {
         description: "Request a quote for custom machining services from Stellar Metal Machining.",
         images: [
             {
-                url: 'https://www.stellarmetalworks.com/public/StellarMetalLogoSquare.svg',
+                url: 'https://cdn.stellarmetalworks.com/StellarMetalLogoSquare.svg',
                 width: 400,
                 height: 400,
                 alt: 'Stellar Metal Machining Logo'

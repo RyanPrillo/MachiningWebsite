@@ -14,7 +14,7 @@ export const metadata = {
         description: "Discover our range of metal machining services, including manual machining, precision machining, fabrication, and prototyping.",
         images: [
             {
-                url: 'https://www.stellarmetalworks.com/public/StellarMetalLogoSquare.svg',
+                url: 'https://cdn.stellarmetalworks.com/StellarMetalLogoSquare.svg',
                 width: 400,
                 height: 400,
                 alt: 'Stellar Metal Machining Logo'
