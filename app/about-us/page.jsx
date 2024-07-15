@@ -114,7 +114,7 @@ export default async function AboutUs() {
                     <h1>Our Story</h1>
                 </header>
 
-                <h1 className="z-10 font-bold p-10 w-4/5 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center text-shadow-sm shadow-black black-overlay-bg">
+                <h1 className="z-10 font-bold p-10 w-4/5 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center text-shadow-sm shadow-black black-overlay-bg items-center">
                     Stellar Metal Machining is a small, family-run machine shop nestled in Northern New Jersey.
                     I&rsquo;m
                     Thomas P., and I bring nearly a decade of mechanical experience to the world of precision machining.
