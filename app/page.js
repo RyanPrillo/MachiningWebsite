@@ -113,14 +113,10 @@ export default async function Home() {
                         in Every Detail</h1>
 
                     {/*Identifies our goals and the purpose of the shop*/}
-                    <section className="black-overlay-bg z-20 flex flex-col shadow-black shadow-2xl items-center w-8/12 row-start-3 row-end-4 justify-self-center h-fit p-4 text-center">
-                      <RequestQuoteButton/>
-                        <h2 className={`${robotoSlab.className} font-extrabold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-wide pb-4 text-shadow-lg text-silver m-1 sm:m-2 md:mb-4 lg:m-6 xl:m-8`}>
-                            Tailored Machining Services for Your Specific Needs:
-                        </h2>
-                        <p className="text-sm sm:text-[16px] md:text-lg lg:text-xl xl:text-2xl text-center text-shadow-sm black-overlay-bg p-2 sm:p-3 md:p-4 lg:p-6 xl:p-8">Stellar
+                    <section className="black-overlay-bg z-20 flex flex-col items-center w-8/12 row-start-3 row-end-4 justify-self-center h-fit p-4 text-center">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center p-2 sm:p-3 md:p-4 lg:p-6 xl:p-8">Stellar
                             Metal Machining&#8482; Takes on Many Jobs that Bigger Machine Shops Decline Due to Small
-                            Volume. We Cater to Customers Who Need Custom Parts for Automotive, Household, and Industrial Purposes. Additionally, We Assist Small Businesses and Startups in Prototyping and Producing Parts to Help Bring Their Ideas to Life</p>
+                            Volume. <br/> <Link href="/services" className="text-gray-400 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">Check our Services Section to See What We Could Provide for You!</Link></h2>
                     </section>
 
                     {/*the background image, above the fold (LCP)*/}
@@ -142,7 +138,7 @@ export default async function Home() {
 
                     {/*call to action*/}
                     <p className="w-full font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl row-start-6 row-end-7 self-end bg-blue-950 p-2 md:p-8 text-white border-t-4 border-b-4 border-gray-200 text-center z-20 relative -bottom-20">
-                        <Link href="/request-quote" className="font-extrabold text-yellow-200" aria-label="Go to our contact page">Click Here To Contact Us Today! </Link> We Work Directly with Each Customer to Provide Them With Exactly What They Need
+                        <Link href="/request-quote" className="font-extrabold text-yellow-200" aria-label="Go to our contact page">Click Here For A Free Quote Today! </Link> We Work Directly with Each Customer to Provide Them With Exactly What They Need
                     </p>
                 </article>
             </section>

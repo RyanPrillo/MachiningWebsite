@@ -21,6 +21,9 @@ export default function RootLayout({ children }) {
     <body className={manrope.className}>
     <link rel="icon" href="/favicon-32x32.png" sizes="any"/>
     {children}
+    <footer className="bg-blue-900 text-white text-center p-4">
+      <p>&copy; 2024 Stellar Metal Machining. All rights reserved.</p>
+    </footer>
     </body>
     </html>
   );

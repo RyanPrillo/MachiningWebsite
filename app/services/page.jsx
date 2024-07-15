@@ -103,7 +103,7 @@ export default async function Services() {
 
             </header>
 
-            <article className="bg-blue-950 text-white font-bold p-5 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl w-full border-t-4 border-t-gray-200">Don&rsquo;t see what you need? <Link href="/request-quote" className="font-extrabold text-yellow-200" aria-label="Go to our contact page"> Contact us</Link> and we will try our best to get you exactly what you want!</article>
+            <article className="bg-blue-950 text-white font-bold p-5 text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl w-full border-t-4 border-t-gray-200">Don&rsquo;t See What you Need? <Link href="/request-quote" className="font-extrabold text-yellow-200" aria-label="Go to our contact page"> Contact Us</Link> and We Will Try our Best to Get You Exactly What You Want!</article>
 
             <section className="flex flex-col bg-off-white justify-center p-14 items-center">
                 <p className="text-black text-center text-sm sm:text-lg md:text-xl lg:text-xl xl:text-xl p-5">&#42;This List is Not All Inclusive</p>
@@ -115,7 +115,7 @@ export default async function Services() {
                     Services</h2>
 
 
-                <h3 className="text-black text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-bold border-t-4 border-gray-400 pt-10">Custom
+                <h3 className="text-black text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-bold border-t-4 border-gray-400 pt-10 decoration-4 decoration-gray-500 underline">Custom
                     Parts</h3>
                 <section className="flex pt-16">
                     <figure className=" pr-16 basis-1/3 flex flex-col items-center">
