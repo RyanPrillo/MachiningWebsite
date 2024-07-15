@@ -155,7 +155,7 @@ export default async function AboutUs() {
                             take on due to a small volume. Whether it is a unique part for your car project, a repair or
                             replacement for a specific part, or a custom-made part for your startup company&rsquo;s
                             prototype, we exhibit great care and precision for every project we take on. Whether you
-                            need a Custom Part for automotive, household, and industrial purposes, we'll bring your
+                            need a Custom Part for automotive, household, and industrial purposes, we&rsquo;ll bring your
                             ideas to life.
                         </p>
                         <Image className="m-8 border-4 justify-center rounded-2xl overflow-hidden basis-1/4"
