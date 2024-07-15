@@ -120,8 +120,8 @@ export default async function AboutUs() {
                     Thomas P., and I bring nearly a decade of mechanical experience to the world of precision machining.
                 </h1>
 
-                <figure className="z-10">
-                    <Image className="m-8 border-4 justify-center rounded-2xl overflow-hidden"
+                <figure className="z-10 p-6">
+                    <Image className="border-4 justify-center rounded-2xl overflow-hidden"
                            src="/TomP.jpg"
                            loading="eager"
                            width={500}
